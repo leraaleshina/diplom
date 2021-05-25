@@ -1,0 +1,218 @@
+.background{
+    background-image: url(../svg/personal_area.svg);
+    background-repeat: no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.personal_title{
+    font-weight: bold;
+    font-size: 48px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    color: #F3FBFF;
+    background-image: url("../svg/personal_title.svg");
+    background-repeat: no-repeat;
+    height: 17vh;
+    margin-left: 400px;
+    padding-left: 110px;
+    margin-bottom: 70px;
+}
+
+.personal_wrapper{
+    margin-left: 220px;
+    display: flex;
+    flex-direction: row;
+}
+
+.personal_data{
+    display: flex;
+    flex-direction:row;
+}
+
+.block{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.info{
+    font-weight: 300;
+    font-size: 18px;
+    color: #02265C;
+    margin-bottom: 14px;
+    margin-left: 23px;
+}
+
+.adress_title{
+    display: flex;
+    flex-direction: column;
+    margin-left: 42px;
+}
+
+.adress{
+    display: flex;
+    flex-direction: column;
+}
+
+.adr_info{
+    font-weight: 300;
+    font-size: 18px;
+    color: #02265C;
+    margin-left: 18px;
+    margin-bottom: 14px;
+}
+
+.header_button{
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    font-size: 18px;
+    width: 200px;
+    height: 44px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: #1194FF;
+    color: #F3FBFF;
+    border-radius: 63px;
+    border: none;
+    margin-left: 15px;
+}
+
+
+.product_wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 126px;
+}
+
+.title{
+    font-weight: 300;
+    font-size: 36px;
+    color: #02265C;
+    margin-top: 85px;
+    margin-bottom: 67px;
+}
+
+.product{
+    margin-left: 120px;
+}
+
+.img_liked{
+    margin-right: 93px;
+}
+
+.price{
+    font-weight: normal;
+    font-size: 24px;
+    color: #02265C;
+    margin-right: 72px;
+}
+
+.icon{
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.img_icon{
+    margin-left: 16px;
+}
+
+@media(width:768px){
+    .personal_title{
+        font-size: 48px;
+        height: 23vh;
+        margin-left: 50px;
+        margin-bottom: 30px;
+    }
+
+    .personal_wrapper{
+        margin-left: 70px;
+    }
+
+    .personal_photo{
+        height: 150px;
+    }
+
+    .block{
+        margin-top: 20px;
+    }
+
+    .data{
+        margin-left: 14px;
+    }
+
+    .info{
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .adress_title{
+        margin-left: 22px;
+    }
+
+    .adr_info{
+        font-size: 12px;
+        margin-left: 12px;
+        margin-bottom: 14px;
+    }
+
+    .header_button{
+        font-size: 14px;
+        width: 160px;
+        height: 32px;
+        margin-left: 0;
+    }
+
+    .product{
+        margin-left: 70px;
+    }
+
+    .title{
+        font-size: 36px;
+        margin-top: 35px;
+        margin-bottom: 40px;
+    }
+
+    .product{
+        margin-left: 60px;
+    }
+
+    .photo{
+        width: 200px;
+        height: 200px;
+    }
+
+    .img_liked{
+        margin-right: 40px;
+    }
+
+    .price{
+        font-size: 16px;
+        margin-right: 35px;
+        margin-left: 10px;
+    }
+    
+    .icon{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .img_icon{
+        margin-left: 16px;
+        height: 20px;
+        width: 20px;
+    }
+
+    .product_wrapper{
+        margin-bottom: 20px;
+    }
+    
+}
