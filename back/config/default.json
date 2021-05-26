@@ -1,5 +1,9 @@
 {
     "port": 5000, 
     "jwtSecret": "singaservice",
-    "mongoUrl": "mongodb+srv://karina:12345@cluster0.xywrs.mongodb.net/app?retryWrites=true&w=majority"
+    "DB_NAME": "singaservice",
+    "DB_USER": "postgres",
+    "DB_PASSWORD": "applerina",
+    "DB_HOST": "localhost",
+    "DB_PORT": 5432
 }
