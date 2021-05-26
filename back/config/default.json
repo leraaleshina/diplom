@@ -1,0 +1,5 @@
+{
+    "port": 5000, 
+    "jwtSecret": "singaservice",
+    "mongoUrl": "mongodb+srv://karina:12345@cluster0.xywrs.mongodb.net/app?retryWrites=true&w=majority"
+}
