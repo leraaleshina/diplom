@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
     }
   };
   Clients.init({
@@ -24,8 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     photo_c:DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Clients',
-    tableName:'clients',
+    modelName: 'client',
+    tableName: 'client',
   });
   return Clients;
 };
