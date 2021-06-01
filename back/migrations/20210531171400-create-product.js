@@ -16,13 +16,23 @@ module.exports = {
       price: {
         type: Sequelize.FLOAT
       },
-      id_kat: {
+      image: {
+        type: Sequelize.STRING
+      },
+      count: {
+        type: Sequelize.INTEGER
+      },
+      color: {
+        type: Sequelize.STRING
+      },
+      id_podkat: {
         type: Sequelize.INTEGER,
         references:
       {
-        model: 'kat_device',
+        model: 'podkat_devices',
         key: 'id'
       }
+
       },
       id_stock: {
         type: Sequelize.INTEGER,

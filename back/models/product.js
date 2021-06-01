@@ -15,13 +15,12 @@ module.exports = (sequelize, DataTypes) => {
   Product.init({
     name_prod: DataTypes.STRING,
     price: DataTypes.FLOAT,
-
-    id_kat: {
+    image: DataTypes.STRING,
+    count: DataTypes.INTEGER,
+    color: DataTypes.STRING,
+    id_podkat: {
       type: DataTypes.INTEGER,
-      // references:  {
-      //   model:  Model.Kat_devices,
-      //   foreignKey: 'id'
-      // }
+    
     },
 
     id_stock: {
