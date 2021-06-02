@@ -3,15 +3,13 @@ import logoimage from "../svg/logoimage.svg";
 import styles from "../css components/header_f.module.css";
 import { Link } from "react-router-dom";
 
-export const First_header = () => {
+const FirstHeader = () => {
   return (
     <header className={styles.header_first}>
-      <div className={styles.header_wrapper}>
-        <div className={styles.header_logo}>
-          <a href="/" className={styles.header_logo_link}>
-            <img src={logoimage} alt="logo" className={styles.logoimage} />
-          </a>
-        </div>
+      <div className={styles.header_links}>
+        <a href="/" className={styles.header_logo_link}>
+          <img src={logoimage} alt="logo" className={styles.logoimage} />
+        </a>
         <div className={styles.header_menu}>
           <nav className={styles.header_nav}>
             <ul className={styles.header_list}>
@@ -31,7 +29,7 @@ export const First_header = () => {
                 </a>
               </li>
               <li className={styles.header_item}>
-                <a href="#" className={styles.header_link}>
+                <a href="/feedback" className={styles.header_link}>
                   Обратная сявзь
                 </a>
               </li>
@@ -42,25 +40,30 @@ export const First_header = () => {
               </li>
             </ul>
           </nav>
+          <Link to={"/registration"}>
+            {" "}
+            <button className={styles.header_button}>Регистрация</button>{" "}
+          </Link>
+        </div>
+      </div>
+
+      <div className={styles.second_block}>
+        <div className={styles.text_block}>
+          <span className={styles.text_item}>Чехлы</span>
+          <span className={styles.text_item}>Аксессуары</span>
+          <span className={styles.text_item}>Периферийные устройства </span>
+          <p className={styles.description}>
+            Закажите аксессуары для вашего телефона у нас и получите скидку на
+            первый заказ 10%
+          </p>
         </div>
         <Link to={"/registration"}>
           {" "}
-          <button className={styles.header_button}>Регистрация</button>{" "}
+          <button className={styles.button}>Начать покупки</button>{" "}
         </Link>
       </div>
-      <div className={styles.header_text}>
-        <p className={styles.header_content}>Чехлы</p>
-        <p className={styles.header_content}>Аксессуары</p>
-        <p className={styles.header_content}>Периферийные устройства</p>
-        <p className={styles.header_descr}>
-          Закажите аксессуары для вашего телефона у нас и получите скидку на
-          первый заказ 10%
-        </p>
-      </div>
-      <Link to={"/persona"}>
-        {" "}
-        <button className={styles.text_button}>Начать покупки</button>{" "}
-      </Link>
     </header>
   );
 };
+
+export default FirstHeader;

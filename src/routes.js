@@ -8,7 +8,8 @@ import First_page from "./pages/first_page";
 import Registration from "./pages/registration";
 import Avtorization from "./pages/avtorization";
 import Catalog from "./pages/catalog";
-import Slider from "./components/slider";
+import Service from "./pages/service";
+import Feedback from "./pages/feedback";
 
 export const Routes = () => {
   return (
@@ -37,8 +38,11 @@ export const Routes = () => {
       <Route path={"/catalog"}>
         <Catalog />
       </Route>
-      <Route path={"/s"}>
-        <Slider />
+      <Route path={"/service"}>
+        <Service />
+      </Route>
+      <Route path={"/feedback"}>
+        <Feedback />
       </Route>
     </Switch>
   );

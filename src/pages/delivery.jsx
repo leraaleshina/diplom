@@ -12,7 +12,8 @@ const Delivery = () => {
                     <h1 className={styles.delivery_title}>
                         Доставка
             </h1>
-                    <div className={styles.descr_block}>
+<div className={styles.all_description}>
+<div className={styles.descr_block}>
                         <h3 className={styles.descr_title}>Доставка в Ростове-на Дону</h3>
                         <div className={styles.delivery_p}>
                             <p className={styles.delivery_descr}>Доставка в пределах города осуществляется с 10:00 до 19:00. </p>
@@ -58,6 +59,7 @@ const Delivery = () => {
                             </p>
                         </div>
                     </div>
+</div>
 
                 </div>
             </div>

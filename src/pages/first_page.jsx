@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../css components/first_page.module.css';
-import { First_header } from '../components/header_f.js'
+import  First_header from '../components/header_f.js'
 import { Footer } from '../components/footer.js'
 import { Link } from 'react-router-dom'
 

@@ -6,7 +6,7 @@ import pic1 from '../svg/pic-1.svg';
 import pic2 from '../svg/pic-2.svg';
 import pic3 from '../svg/pic-3.svg';
 import basket from '../svg/basket-icon.svg'
-import heart from '../svg/red-heart.svg'
+import heart from '../svg/blue-heart.svg'
 import { Link } from 'react-router-dom'
 
 const Catalog = () => {
@@ -14,7 +14,8 @@ const Catalog = () => {
         <section className={styles.catalog}>
             <Header />
             <div className={styles.background}>
-                <h1 className={styles.title}>Товары</h1>
+                    <div className={styles.wrapper_catalog}>
+                    <h1 className={styles.title}>Товары</h1>
                 <input
                     className={styles.form_input}
                     id={styles.name}
@@ -30,12 +31,14 @@ const Catalog = () => {
                         </a>
                         <div className={styles.liked}>
                             <span className={styles.price}>2300 руб.</span>
+                            <div className={styles.item_liked}>
                             <a href="" className={styles.icon_link}>
                                 <img src={basket} alt="product" className={styles.img_icon} />
                             </a>
                             <a href="" className={styles.icon_link}>
                                 <img src={heart} alt="product" className={styles.img_icon} />
                             </a>
+                            </div>
                         </div>
                     </div>
 
@@ -45,12 +48,14 @@ const Catalog = () => {
                         </a>
                         <div className={styles.liked}>
                             <span className={styles.price}>2300 руб.</span>
+                            <div className={styles.item_liked}>
                             <a href="" className={styles.icon_link}>
                                 <img src={basket} alt="product" className={styles.img_icon} />
                             </a>
                             <a href="" className={styles.icon_link}>
                                 <img src={heart} alt="product" className={styles.img_icon} />
                             </a>
+                            </div>
                         </div>
                     </div>
 
@@ -60,12 +65,14 @@ const Catalog = () => {
                         </a>
                         <div className={styles.liked}>
                             <span className={styles.price}>2300 руб.</span>
+                            <div className={styles.item_liked}>
                             <a href="" className={styles.icon_link}>
                                 <img src={basket} alt="product" className={styles.img_icon} />
                             </a>
                             <a href="" className={styles.icon_link}>
                                 <img src={heart} alt="product" className={styles.img_icon} />
                             </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,12 +85,14 @@ const Catalog = () => {
                         </a>
                         <div className={styles.liked}>
                             <span className={styles.price}>2300 руб.</span>
+                            <div className={styles.item_liked}>
                             <a href="" className={styles.icon_link}>
                                 <img src={basket} alt="product" className={styles.img_icon} />
                             </a>
                             <a href="" className={styles.icon_link}>
                                 <img src={heart} alt="product" className={styles.img_icon} />
                             </a>
+                            </div>
                         </div>
                     </div>
 
@@ -93,12 +102,14 @@ const Catalog = () => {
                         </a>
                         <div className={styles.liked}>
                             <span className={styles.price}>2300 руб.</span>
+                            <div className={styles.item_liked}>
                             <a href="" className={styles.icon_link}>
                                 <img src={basket} alt="product" className={styles.img_icon} />
                             </a>
                             <a href="" className={styles.icon_link}>
                                 <img src={heart} alt="product" className={styles.img_icon} />
                             </a>
+                            </div>
                         </div>
                     </div>
 
@@ -108,12 +119,14 @@ const Catalog = () => {
                         </a>
                         <div className={styles.liked}>
                             <span className={styles.price}>2300 руб.</span>
+                            <div className={styles.item_liked}>
                             <a href="" className={styles.icon_link}>
                                 <img src={basket} alt="product" className={styles.img_icon} />
                             </a>
                             <a href="" className={styles.icon_link}>
                                 <img src={heart} alt="product" className={styles.img_icon} />
                             </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,12 +140,14 @@ const Catalog = () => {
                         </a>
                         <div className={styles.liked}>
                             <span className={styles.price}>2300 руб.</span>
+                            <div className={styles.item_liked}>
                             <a href="" className={styles.icon_link}>
                                 <img src={basket} alt="product" className={styles.img_icon} />
                             </a>
                             <a href="" className={styles.icon_link}>
                                 <img src={heart} alt="product" className={styles.img_icon} />
                             </a>
+                            </div>
                         </div>
                     </div>
 
@@ -142,12 +157,14 @@ const Catalog = () => {
                         </a>
                         <div className={styles.liked}>
                             <span className={styles.price}>2300 руб.</span>
+                            <div className={styles.item_liked}>
                             <a href="" className={styles.icon_link}>
                                 <img src={basket} alt="product" className={styles.img_icon} />
                             </a>
                             <a href="" className={styles.icon_link}>
                                 <img src={heart} alt="product" className={styles.img_icon} />
                             </a>
+                            </div>
                         </div>
                     </div>
 
@@ -157,16 +174,19 @@ const Catalog = () => {
                         </a>
                         <div className={styles.liked}>
                             <span className={styles.price}>2300 руб.</span>
+                            <div className={styles.item_liked}>
                             <a href="" className={styles.icon_link}>
                                 <img src={basket} alt="product" className={styles.img_icon} />
                             </a>
                             <a href="" className={styles.icon_link}>
                                 <img src={heart} alt="product" className={styles.img_icon} />
                             </a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <Link to ={'/'}> <button className={styles.button}>Показать еще</button> </Link>
+                    </div>
             </div>
             <Question />
         </section>

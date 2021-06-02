@@ -12,7 +12,7 @@ const Contact = () => {
             <Header />
             <div className={styles.background}>
             <div className={styles.contact_wrapper}>
-                <h1 className={styles.delivery_title}>
+                <h1 className={styles.contact_title}>
                     Контакты
             </h1>
                 <div className={styles.contact_info}>
@@ -32,7 +32,7 @@ const Contact = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+           
 
 
             <div className={styles.adress}>
@@ -44,6 +44,7 @@ const Contact = () => {
 
             <div className={styles.map}>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2706.279074980961!2d39.69073771558377!3d47.28934567916494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c8013234d11b%3A0x9be2b835d2ce9ceb!2z0LEt0YAg0JrQvtC80LDRgNC-0LLQsCwgMTAsINCg0L7RgdGC0L7Qsi3QvdCwLdCU0L7QvdGDLCDQoNC-0YHRgtC-0LLRgdC60LDRjyDQvtCx0LsuLCAzNDQwNjQ!5e0!3m2!1sru!2sru!4v1620213259303!5m2!1sru!2sru" className = {styles.adress_map} allowfullscreen="" loading="lazy"></iframe>
+            </div>
             </div>
             </div>
             <Question />

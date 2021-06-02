@@ -36,7 +36,7 @@ const Avtorization = () => {
                         />
                     </div>
                     <a href="" className={styles.link}><span className={styles.password}>Забыли пароль?</span></a>
-                    <Link to ={'/'}> <button className={styles.button}>Войти</button> </Link>
+                    <Link to ={'/persona'}> <button className={styles.button}>Войти</button> </Link>
                 </div>
                </div>
                <div className={styles.block_sec}>

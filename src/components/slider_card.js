@@ -1,16 +1,14 @@
 import React from "react";
+import styles from "../css components/slider.module.css";
 function SliderCard({ card }) {
   console.log(card);
   return (
     <div
+      className={styles.card}
       style={{
-        width: "200px",
-        height: "200px",
-        border: "1px solid black",
+        backgroundImage: `url("${card.image}")`,
       }}
-    >
-      *
-    </div>
+    ></div>
   );
 }
 
