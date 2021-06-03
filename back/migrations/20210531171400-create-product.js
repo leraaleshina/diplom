@@ -32,7 +32,6 @@ module.exports = {
         model: 'podkat_devices',
         key: 'id'
       }
-
       },
       id_stock: {
         type: Sequelize.INTEGER,

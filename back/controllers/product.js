@@ -1,12 +1,12 @@
 const {Router} = require('express');
-const {kat_device} = require('../models')
+const {product} = require('../models')
 const router = Router();
 
 
-//получение всех категорий
-router.get('/kategories', async (req, res) => {
+//получение всех продуктов
+router.get('/product', async (req, res) => {
     try {
-        kat_device.findAll()
+        product.findAll()
        .then(result => res.status(200).json(result))
        .catch(err => {throw Error(err)})
     } catch (e) {
@@ -14,25 +14,24 @@ router.get('/kategories', async (req, res) => {
     }
 });
 
-
-//поиск категории по id
-router.get('/kategorie/:id', async (req, res) => {
+//поиск продуктков по id
+router.get('/product/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const kats = kat_device.findOne({ where: { id}})
+        const product = product.findOne({ where: { id: id }})
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
     } catch (e) {
-        res.status(500).json({message: 'Что-то пошло не так...' + e});
+        res.status(500).json({message: 'Что-то пошло не так...' + e.message});
     }
 });
 
 
-//удаление конкретной категории по id
-router.delete('/kategorie/:id', async (req, res) => {
+//удаление конкретного продукта по id
+router.delete('/product/:id', async (req, res) => {
     try {
         const id = req.params.id
-        await kat_device.destroy({
+        await product.destroy({
             where: {
               id
             }
@@ -40,32 +39,32 @@ router.delete('/kategorie/:id', async (req, res) => {
           .then(result => res.status(200).json(result))
           .catch(err => {throw Error(err)})
     } catch (e) {
-        res.status(500).json({message: 'Что-то пошло не так...' + e});
+        res.status(500).json({message: 'Что-то пошло не так...' + e.message});
     }
 });
 
 
-//добавление категории
-router.post('/kategorie/create', async(req, res) => {
+//добавление продукта
+router.post('/product/create', async(req, res) => {
     try {
         const data = req.body
-        kat_device.create(data)
+        product.create(data)
         .then(result => res.status(200).json(result))
           .catch(err => {throw Error(err)})
     } catch (error) {
-        res.status(500).json({message: 'Что-то пошло не так...' + error});
+        res.status(500).json({message: 'Что-то пошло не так...' + error.message});
     }
 })
 
 
-//редактирование категории
-router.put('/kategorie/update/:id', async(req, res) => {
+//редактирование продукта
+router.put('/product/update/:id', async(req, res) => {
     try {
         const update = req.body
         const id = req.params.id
-        let kats = await kat_device.findOne({ where: { id}})
+        let product = await product.findOne({ where: { id }})
 
-        kats.update(update)
+        product.update(update)
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
     } catch (error) {
