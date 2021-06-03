@@ -1,25 +1,24 @@
-.qustion {
+.question {
   background-color: #3cc6fe;
-  padding-top: 84px;
-  margin-top: 20px;
 }
 
 .question_section {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 84px 168px 0px 120px;
 }
 
 .quest_title {
   font-weight: bold;
   font-size: 24px;
   color: #f3fbff;
-  margin-left: 120px;
 }
 
 .quest_description {
   font-weight: normal;
   font-size: 18px;
   color: #f3fbff;
-  margin-left: 120px;
   max-width: 360px;
 }
 
@@ -31,10 +30,7 @@
   width: 248px;
   height: 50px;
   margin-right: 24px;
-}
-
-.request {
-  margin-left: 44px;
+  padding-left: 24px;
 }
 
 .request_button {
@@ -42,7 +38,7 @@
   font-weight: 300;
   font-size: 18px;
   width: 248px;
-  height: 44px;
+  height: 50px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   background-color: #1194ff;
   color: #f3fbff;
@@ -58,20 +54,30 @@
   -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
   -o-background-size: 100%; /* Opera 9.6+ */
   background-size: 100%; /* Современные браузеры */
-  height: 400px;
 }
 
 .footer_wrapper {
-  margin-left: 304px;
-}
-
-.footer_content {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 147px 206px 103px 250px;
 }
 
-.footer_menu {
-  margin-top: 155px;
+.footer_nav {
+  margin: 0;
+}
+
+ul {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  padding-left: 0;
+}
+ul li {
+  list-style-position: inside;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .footer_item {
@@ -90,8 +96,6 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
-  margin-left: 415px;
 }
 
 .footer_tel {
@@ -118,44 +122,36 @@
 }
 
 @media (width: 768px) {
+  .question_section {
+    padding: 30px 0px 0px 60px;
+  }
+
   .quest_title {
-    margin-left: 45px;
-    font-style: 22px;
+    font-size: 18px;
   }
 
   .quest_description {
     font-size: 14px;
-    margin-left: 45px;
-    max-width: 530px;
+    max-width: 400px;
   }
 
   .form_input {
-    width: 160px;
-    height: 35px;
-    margin-right: 24px;
+    width: 180px;
+    height: 40px;
+    margin-right: 14px;
+    padding-left: 14px;
   }
 
-  .request {
-    margin-left: 25px;
+  .request_button {
+    font-size: 16px;
+    width: 180px;
+    height: 40px;
+    margin-left: 80px;
+    margin-top: 15px;
   }
 
-  .footer {
-    height: 43vh;
-  }
   .footer_wrapper {
-    margin-left: 104px;
-  }
-
-  .footer_menu {
-    margin-top: 75px;
-  }
-
-  .footer_item {
-    margin-bottom: 11px;
-  }
-
-  .footer_menu :first-child {
-    margin-bottom: 11px;
+    padding: 60px 100px 40px 100px;
   }
 
   .footer_link {
@@ -164,29 +160,19 @@
 
   .footer_tel {
     font-size: 14px;
-    margin-bottom: 6px;
   }
 
   .footer_mail {
     font-size: 14px;
-    margin-bottom: 20px;
-    margin-bottom: 6px;
-  }
-
-  .footer_adress {
-    margin-top: 75px;
-    margin-left: 150px;
+    margin-bottom: 10px;
   }
 
   .footer_ico {
     margin-left: 10px;
   }
 
-  .request_button {
-    font-size: 14px;
-    width: 200px;
-    height: 35px;
-    margin-left: 55px;
-    margin-top: 15px;
+  .footer_ico {
+    width: 20px;
+    height: 20px;
   }
 }

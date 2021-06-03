@@ -90,14 +90,14 @@
   margin-bottom: 90px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 730px) {
   .header_first {
     background-image: url("../svg/header_bg_768.svg");
     background-repeat: no-repeat;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
+    -moz-background-size: 100%; 
+    -webkit-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
   }
 
   .header_links {
@@ -127,18 +127,117 @@
 
   .description {
     font-size: 14px;
-    width: 420px;
-    padding: 2px 0px 0px 40px;
+    width: 390px;
+    padding: 2px 0px 0px 30px;
   }
 
   .button {
     font-size: 14px;
     width: 150px;
     height: 25px;
-    margin-left: 160px;
+    margin-left: 140px;
     margin-bottom: 80px;
+  }
+} */
+
+@media (max-width: 1215px) {
+  .header_links {
+    padding: 19px 120px 0px 35px;
+  }
+
+  .text_item {
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+
+  .second_block {
+    padding: 30px 0px 30px 55px;
+  }
+
+  .description {
+    width: 564px;
+    padding: 2px 0px 21px 25px;
+  }
+
+  .button {
+    margin-left: 190px;
   }
 }
 
-@media (width: 320px) {
+@media (min-width: 1160px) {
+  .header_item {
+    font-size: 18px;
+  }
+
+  .header_button {
+    font-size: 16px;
+    width: 185px;
+    height: 35px;
+    margin-top: 10px;
+  }
+
+  .second_block {
+    padding: 35px 0px 120px 120px;
+  }
+
+  .text_item {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 16px;
+    width: 500px;
+    padding: 0px 0px 5px 60px;
+    margin: 0;
+  }
+
+  .button {
+    font-size: 16px;
+    width: 185px;
+    height: 35px;
+    margin-left: 200px;
+    margin-bottom: 0px;
+  }
 }
+
+/* @media (max-width: 1000px) {
+  .header_links {
+    padding: 10px 0px 0px 9px;
+  }
+
+  .header_item {
+    font-size: 18px;
+  }
+
+  .header_button {
+    font-size: 16px;
+    width: 185px;
+    height: 35px;
+    margin-top: 10px;
+  }
+
+  .second_block {
+    padding: 35px 0px 70px 60px;
+  }
+
+  .text_item {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 16px;
+    width: 500px;
+    padding: 0px 0px 5px 60px;
+    margin: 0;
+  }
+
+  .button {
+    font-size: 16px;
+    width: 185px;
+    height: 35px;
+    margin-left: 200px;
+    margin-bottom: 0px;
+  }
+} */
