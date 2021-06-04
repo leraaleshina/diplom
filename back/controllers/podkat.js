@@ -1,13 +1,14 @@
 const {Router} = require('express');
-const {podkat_devices} = require('../models')
+const {podkat_device} = require('../models')
 const router = Router();
 
 
 //получение всех подкатегорий
 router.get('/podkategoriya', async (req, res) => {
     try {
-        const podkat = await podkat_devices.findAll()
-        res.status(200).json(podkat)
+        podkat_device.findAll()
+        .then(result => res.status(200).json(result))
+       .catch(err => {throw Error(err)})
     } catch (e) {
         res.status(500).json({message: 'Что-то пошло не так...' + e});
     }
@@ -18,7 +19,7 @@ router.get('/podkategoriya', async (req, res) => {
 router.get('/podkategoriya/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const podkat = podkat_devices.findOne({ where: { id: id }})
+        podkat.findOne({ where: {id}})
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
     } catch (e) {
@@ -31,7 +32,7 @@ router.get('/podkategoriya/:id', async (req, res) => {
 router.delete('/podkategoriya/:id', async (req, res) => {
     try {
         const id = req.params.id
-        await podkat_devices.destroy({
+        await podkat.destroy({
             where: {
               id: id
             }
@@ -48,7 +49,7 @@ router.delete('/podkategoriya/:id', async (req, res) => {
 router.post('/podkategoriya/create', async(req, res) => {
     try {
         const data = req.body
-        podkat_devices.create(data)
+        podkat.create(data)
         .then(result => res.status(200).json(result))
           .catch(err => {throw Error(err)})
     } catch (error) {
@@ -62,7 +63,7 @@ router.put('/podkategoriya/update/:id', async(req, res) => {
     try {
         const update = req.body
         const id = req.params.id
-        let podkat = await podkat_devices.findOne({ where: { id: id }})
+        let podkat = await podkat.findOne({ where: { id: id }})
 
         podkat.update(update)
             .then(result => res.status(200).json(result))

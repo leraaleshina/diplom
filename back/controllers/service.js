@@ -1,12 +1,12 @@
 const {Router} = require('express');
-const {kat_device} = require('../models')
+const {service} = require('../models')
 const router = Router();
 
 
-//получение всех категорий
-router.get('/kategories', async (req, res) => {
+//получение всех услуг
+router.get('/service', async (req, res) => {
     try {
-        kat_device.findAll()
+        service.findAll()
        .then(result => res.status(200).json(result))
        .catch(err => {throw Error(err)})
     } catch (e) {
@@ -15,11 +15,11 @@ router.get('/kategories', async (req, res) => {
 });
 
 
-//поиск категории по id
-router.get('/kategorie/:id', async (req, res) => {
+//поиск услуги по id
+router.get('/service/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const kats = kat_device.findOne({ where: { id}})
+        const service = service.findOne({ where: { id }})
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
     } catch (e) {
@@ -28,11 +28,11 @@ router.get('/kategorie/:id', async (req, res) => {
 });
 
 
-//удаление конкретной категории по id
-router.delete('/kategorie/:id', async (req, res) => {
+//удаление конкретной услуги по id
+router.delete('/service/:id', async (req, res) => {
     try {
         const id = req.params.id
-        await kat_device.destroy({
+        await service.destroy({
             where: {
               id
             }
@@ -45,11 +45,11 @@ router.delete('/kategorie/:id', async (req, res) => {
 });
 
 
-//добавление категории
-router.post('/kategorie/create', async(req, res) => {
+//добавление услуги
+router.post('/service/create', async(req, res) => {
     try {
         const data = req.body
-        kat_device.create(data)
+        service.create(data)
         .then(result => res.status(200).json(result))
           .catch(err => {throw Error(err)})
     } catch (error) {
@@ -58,14 +58,14 @@ router.post('/kategorie/create', async(req, res) => {
 })
 
 
-//редактирование категории
-router.put('/kategorie/update/:id', async(req, res) => {
+//редактирование услуги
+router.put('/service/update/:id', async(req, res) => {
     try {
         const update = req.body
         const id = req.params.id
-        let kats = await kat_device.findOne({ where: {id}})
+        let service = await service.findOne({ where: { id }})
 
-        kats.update(update)
+        service.update(update)
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
     } catch (error) {

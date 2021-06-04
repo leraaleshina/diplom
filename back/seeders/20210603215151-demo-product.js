@@ -3,12 +3,9 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
-      await queryInterface.bulkInsert('product', [{
-        name_prod: 'Наушники',
-        price: 3000,
-        image: 'https://via.placeholder.com/600/d32776',
-        count: 12,
-        color: 'black',
+      await queryInterface.bulkInsert('stock', [{
+        name_stock: 'Акция',
+        sales: 3000,
         createdAt: new Date(),
         updatedAt: new Date()
       }], {});

@@ -1,12 +1,12 @@
 const {Router} = require('express');
-const {kat_device} = require('../models')
+const {brand} = require('../models')
 const router = Router();
 
 
-//получение всех категорий
-router.get('/kategories', async (req, res) => {
+//получение всех брендов
+router.get('/brand', async (req, res) => {
     try {
-        kat_device.findAll()
+        brand.findAll()
        .then(result => res.status(200).json(result))
        .catch(err => {throw Error(err)})
     } catch (e) {
@@ -14,25 +14,24 @@ router.get('/kategories', async (req, res) => {
     }
 });
 
-
-//поиск категории по id
-router.get('/kategorie/:id', async (req, res) => {
+//поиск брендов по id
+router.get('/brand/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const kats = kat_device.findOne({ where: { id}})
+        const brand = brand.findOne({ where: { id }})
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
     } catch (e) {
-        res.status(500).json({message: 'Что-то пошло не так...' + e});
+        res.status(500).json({message: 'Что-то пошло не так...' + e.message});
     }
 });
 
 
-//удаление конкретной категории по id
-router.delete('/kategorie/:id', async (req, res) => {
+//удаление конкретного бренда по id
+router.delete('/brand/:id', async (req, res) => {
     try {
         const id = req.params.id
-        await kat_device.destroy({
+        await brand.destroy({
             where: {
               id
             }
@@ -40,32 +39,32 @@ router.delete('/kategorie/:id', async (req, res) => {
           .then(result => res.status(200).json(result))
           .catch(err => {throw Error(err)})
     } catch (e) {
-        res.status(500).json({message: 'Что-то пошло не так...' + e});
+        res.status(500).json({message: 'Что-то пошло не так...' + e.message});
     }
 });
 
 
-//добавление категории
-router.post('/kategorie/create', async(req, res) => {
+//добавление бренда
+router.post('/brand/create', async(req, res) => {
     try {
         const data = req.body
-        kat_device.create(data)
+        brand.create(data)
         .then(result => res.status(200).json(result))
           .catch(err => {throw Error(err)})
     } catch (error) {
-        res.status(500).json({message: 'Что-то пошло не так...' + error});
+        res.status(500).json({message: 'Что-то пошло не так...' + error.message});
     }
 })
 
 
-//редактирование категории
-router.put('/kategorie/update/:id', async(req, res) => {
+//редактирование бренда
+router.put('/brand/update/:id', async(req, res) => {
     try {
         const update = req.body
         const id = req.params.id
-        let kats = await kat_device.findOne({ where: {id}})
+        let brand = await brand.findOne({ where: { id }})
 
-        kats.update(update)
+        brand.update(update)
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
     } catch (error) {

@@ -1,12 +1,12 @@
-const {Router} = require('express');
-const {kat_device} = require('../models')
+const {Router, raw} = require('express');
+const {stock} = require('../models')
 const router = Router();
 
 
-//получение всех категорий
-router.get('/kategories', async (req, res) => {
+//получение всех акций
+router.get('/stock', async (req, res) => {
     try {
-        kat_device.findAll()
+        stock.findAll()
        .then(result => res.status(200).json(result))
        .catch(err => {throw Error(err)})
     } catch (e) {
@@ -15,11 +15,11 @@ router.get('/kategories', async (req, res) => {
 });
 
 
-//поиск категории по id
-router.get('/kategorie/:id', async (req, res) => {
+//поиск акции по id
+router.get('/stock/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const kats = kat_device.findOne({ where: { id}})
+        stock.findOne({ where: { id }})
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
     } catch (e) {
@@ -28,11 +28,11 @@ router.get('/kategorie/:id', async (req, res) => {
 });
 
 
-//удаление конкретной категории по id
-router.delete('/kategorie/:id', async (req, res) => {
+//удаление конкретной акции по id
+router.delete('/stock/:id', async (req, res) => {
     try {
         const id = req.params.id
-        await kat_device.destroy({
+        stock.destroy({
             where: {
               id
             }
@@ -45,11 +45,11 @@ router.delete('/kategorie/:id', async (req, res) => {
 });
 
 
-//добавление категории
-router.post('/kategorie/create', async(req, res) => {
+//добавление акции
+router.post('/stock/create', async(req, res) => {
     try {
         const data = req.body
-        kat_device.create(data)
+        stock.create(data)
         .then(result => res.status(200).json(result))
           .catch(err => {throw Error(err)})
     } catch (error) {
@@ -58,16 +58,17 @@ router.post('/kategorie/create', async(req, res) => {
 })
 
 
-//редактирование категории
-router.put('/kategorie/update/:id', async(req, res) => {
+//редактирование акции
+router.put('/stock/update/:id', async(req, res) => {
     try {
         const update = req.body
         const id = req.params.id
-        let kats = await kat_device.findOne({ where: {id}})
-
-        kats.update(update)
+        stock.findOne({ where: { id }})
+        .then(raw => {
+            raw.update(update)
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
+        })
     } catch (error) {
         res.status(500).json({message: 'Что-то пошло не так...' + error});
         throw Error(error)
