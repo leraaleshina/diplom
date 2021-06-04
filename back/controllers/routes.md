@@ -2,25 +2,24 @@
 
 
 
-##### Получение категорий
-метод: get
+### Получение категорий
+метод: get\
 http://localhost:5000/api/kategories/
 
-##### Редактирование категории 
-метод: post
+### Редактирование категории 
+метод: post\
 http://localhost:5000/api/kategorie/update/id
 
-##### Поиск категории по id
-метод: get
+### Поиск категории по id
+метод: get\
 http://localhost:5000/api/kategorie/id
 
-##### Удаление категории по id
+### Удаление категории по id
 метод: delete\
 http://localhost:5000/api/kategorie/id
 
-
-##### Добавление категории
-метод: post
+### Добавление категории
+метод: post\
 http://localhost:5000/api/kategorie/create
 
 
@@ -28,8 +27,8 @@ http://localhost:5000/api/kategorie/create
 # Товары
 
 
-###### Получение всех товаров 
-метод: get
+### Получение всех товаров 
+метод: get\
 http://localhost:5000/api/product
 
 ответ:
@@ -49,90 +48,162 @@ http://localhost:5000/api/product
     }
 ]
 
-###### Поиск продукта по id
-метод: get
+### Поиск продукта по id
+метод: get\
 http://localhost:5000/api/product/id
 
-##### Удаление продукта по id
-метод: delete
+### Удаление продукта по id
+метод: delete\
 http://localhost:5000/api/product/id
 
-##### Добавление продукта
-метод: post
+### Добавление продукта
+метод: post\
 http://localhost:5000/api/product/create
 
-##### Редактирование продукта
-метод: put
+### Редактирование продукта
+метод: put\
 http://localhost:5000/api/product/update/id
 
 
 # Акции
 
 
-###### Получение всех акций
-метод: get
+### Получение всех акций
+метод: get\
 http://localhost:5000/api/stock/
 
-###### Поиск акции по id
-метод: get
+### Поиск акции по id
+метод: get\
 http://localhost:5000/api/stock/id
 
-##### Удаление акции по id
-метод: delete
+### Удаление акции по id
+метод: delete\
 http://localhost:5000/api/stock/id
 
-##### Добавление акции
-метод: post
+### Добавление акции
+метод: post\
 http://localhost:5000/api/stock/create
 
-##### Редактирование акции
-метод: put
+### Редактирование акции
+метод: put\
 http://localhost:5000/api/stock/update/id
 
 
 # Сотрудники
 
 
-###### Получение всех сотрудников
-метод: get
+### Получение всех сотрудников
+метод: get\
 http://localhost:5000/api/sotrud/
 
-###### Поиск сотрудника по id
-метод: get
+### Поиск сотрудника по id
+метод: get\
 http://localhost:5000/api/sotrud/id
 
-##### Удаление сотрудника по id
-метод: delete
+### Удаление сотрудника по id
+метод: delete\
 http://localhost:5000/api/sotrud/id
 
-##### Добавление сотрудника
-метод: post
+### Добавление сотрудника
+метод: post\
 http://localhost:5000/api/sotrud/create
 
-##### Редактирование сотрудника
-метод: put
+### Редактирование сотрудника
+метод: put\
 http://localhost:5000/api/sotrud/update/id
 
 
 # Подкатегории
 
 
-###### Получение подкатегорий
-метод: get
+### Получение подкатегорий
+метод: get\
 http://localhost:5000/api/podkategoriya/
 
-###### Поиск подкатегории по id
-метод: get
+### Поиск подкатегории по id
+метод: get\
 http://localhost:5000/api/podkategoriya/id
 
-##### Удаление подкатегории по id
-метод: delete
+### Удаление подкатегории по id
+метод: delete\
 http://localhost:5000/api/podkategoriya/id
 
-##### Добавление подкатегории
-метод: post
+### Добавление подкатегории
+метод: post\
 http://localhost:5000/api/podkategoriya/create
 
-##### Редактирование подкатегории
-метод: put
+### Редактирование подкатегории
+метод: put\
 http://localhost:5000/api/podkategoriya/update/id
+
+
+# Бренд
+
+
+### Получение брендов
+метод: get\
+http://localhost:5000/api/brand/
+
+### Поиск бренда по id
+метод: get\
+http://localhost:5000/api/brand/id
+
+### Удаление бренда по id
+метод: delete\
+http://localhost:5000/api/brand/id
+
+### Добавление бренда
+метод: post\
+http://localhost:5000/api/brand/create
+
+### Редактирование бренда
+метод: put\
+http://localhost:5000/api/brand/update/id
+
+
+# Услуги
+
+
+### Получение услуг
+метод: get\
+endpoint: /service
+
+### Поиск услуги по id
+метод: get\
+endpoint: /service/id
+
+### Удаление услуги по id
+метод: delete
+endpoint: /service/id
+
+### Добавление услуги
+метод: post
+endpoint: /service/create
+
+### Редактирование услуги
+метод: put
+endpoint: /service/update/id
+
+
+# Работа
+
+
+### Получение работ
+метод: get\
+endpoint: /work
+
+### Поиск работы по id
+метод: get\
+endpoint: /work/id
+
+### Удаление работы по id
+метод: delete
+endpoint: /work/id
+
+### Добавление работы
+метод: post
+endpoint: /work/create
+
+### Редактирование работы
+метод: put
+endpoint: /work/update/id

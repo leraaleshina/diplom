@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     date_time: DataTypes.DATE,
     id_sotrud: DataTypes.INTEGER,
     id_client: DataTypes.INTEGER,
-    id_serv: DataTypes.INTEGER
+    id_serv: DataTypes.INTEGER,
+    is_done:  {type: DataTypes.BOOLEAN, defaultValue: false}
   }, {
     sequelize,
     modelName: 'work',
