@@ -15,7 +15,7 @@ http://localhost:5000/api/kategorie/update/id
 http://localhost:5000/api/kategorie/id
 
 ##### Удаление категории по id
-метод: delete
+метод: delete\
 http://localhost:5000/api/kategorie/id
 
 
