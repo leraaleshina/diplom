@@ -90,81 +90,7 @@
   margin-bottom: 90px;
 }
 
-/* @media (max-width: 730px) {
-  .header_first {
-    background-image: url("../svg/header_bg_768.svg");
-    background-repeat: no-repeat;
-    -moz-background-size: 100%; 
-    -webkit-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
-  }
-
-  .header_links {
-    padding: 19px 0px 0px 9px;
-  }
-
-  .header_item {
-    margin-right: 15px;
-    font-size: 15px;
-  }
-
-  .header_button {
-    font-size: 14px;
-    width: 120px;
-    height: 25px;
-    margin-top: 10px;
-  }
-
-  .second_block {
-    padding: 25px 0px 0px 50px;
-  }
-
-  .text_item {
-    font-size: 26px;
-    margin-bottom: 10px;
-  }
-
-  .description {
-    font-size: 14px;
-    width: 390px;
-    padding: 2px 0px 0px 30px;
-  }
-
-  .button {
-    font-size: 14px;
-    width: 150px;
-    height: 25px;
-    margin-left: 140px;
-    margin-bottom: 80px;
-  }
-} */
-
-@media (max-width: 1215px) {
-  .header_links {
-    padding: 19px 120px 0px 35px;
-  }
-
-  .text_item {
-    font-size: 38px;
-    margin-bottom: 15px;
-  }
-
-  .second_block {
-    padding: 30px 0px 30px 55px;
-  }
-
-  .description {
-    width: 564px;
-    padding: 2px 0px 21px 25px;
-  }
-
-  .button {
-    margin-left: 190px;
-  }
-}
-
-@media (min-width: 1160px) {
+@media (max-width: 1160px) {
   .header_item {
     font-size: 18px;
   }
@@ -201,7 +127,7 @@
   }
 }
 
-/* @media (max-width: 1000px) {
+@media (max-width: 1020px) {
   .header_links {
     padding: 10px 0px 0px 9px;
   }
@@ -240,4 +166,178 @@
     margin-left: 200px;
     margin-bottom: 0px;
   }
-} */
+}
+
+@media (max-width: 870px) {
+  .header_links {
+    padding: 19px 50px 0px 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header_first {
+    background-image: url("../svg/header_bg_768.svg");
+    background-repeat: no-repeat;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+  }
+
+  .header_links {
+    padding: 19px 80px 0px 9px;
+  }
+
+  .header_item {
+    margin-right: 15px;
+    font-size: 13px;
+  }
+
+  .header_button {
+    font-size: 14px;
+    width: 120px;
+    height: 25px;
+    margin-top: 10px;
+  }
+
+  .second_block {
+    padding: 25px 0px 0px 50px;
+  }
+
+  .text_item {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 14px;
+    width: 390px;
+    padding: 2px 0px 0px 30px;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 150px;
+    height: 25px;
+    margin-left: 140px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 720px) {
+  .header_item {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header_links {
+    padding: 19px 15px 0px 9px;
+  }
+
+  .second_block {
+    padding: 15px 0px 0px 60px;
+  }
+
+  .text_item {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .description {
+    font-size: 14px;
+    width: 350px;
+    padding: 0px 0px 5px 15px;
+  }
+
+  .button {
+    margin-left: 100px;
+    margin-bottom: 65px;
+  }
+}
+
+@media (max-width: 560px) {
+  .logoimage {
+    height: 75px;
+    width: 75px;
+  }
+
+  .header_links {
+    padding: 19px 35px 0px 9px;
+  }
+
+  .header_menu {
+    margin-top: 25px;
+  }
+
+  .header_item {
+    margin-right: 10px;
+    font-size: 10px;
+  }
+
+  .header_button {
+    font-size: 12px;
+    width: 110px;
+    height: 25px;
+    margin-top: 10px;
+  }
+
+  .second_block {
+    padding: 15px 0px 0px 40px;
+  }
+
+  .text_item {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  .logoimage {
+    height: 35px;
+    width: 35px;
+  }
+
+  .header_menu {
+    margin-top: 0px;
+  }
+
+  .header_item {
+    margin-right: 7px;
+    font-size: 8px;
+  }
+
+  .header_button {
+    font-size: 8px;
+    width: 90px;
+    height: 15px;
+    margin-top: 12px;
+  }
+
+  .second_block {
+    padding: 10px 0px 0px 20px;
+  }
+
+  .text_item {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 10px;
+    width: 250px;
+  }
+
+  .button {
+    margin-left: 80px;
+    font-size: 10px;
+    width: 120px;
+    margin-bottom: 55px;
+  }
+}
+
+@media (width: 420px);

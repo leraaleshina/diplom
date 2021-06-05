@@ -45,9 +45,11 @@ const Persona = () => {
             </div>
 
             <div className={styles.product}>
-                <h2 className={styles.title}>
-                    Понравившиеся товары
-                </h2>
+                <a href="/like">
+                    <h2 className={styles.title}>
+                        Понравившиеся товары
+                    </h2>
+                </a>
             </div>
             <Slick />
            </div>

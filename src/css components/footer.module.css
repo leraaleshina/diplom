@@ -18,13 +18,14 @@
   margin: 0;
 }
 
-ul {
+.footer_menu {
   -webkit-columns: 2;
   -moz-columns: 2;
   columns: 2;
   padding-left: 0;
 }
-ul li {
+
+.footer_menu .footer_item {
   list-style-position: inside;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;

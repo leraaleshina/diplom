@@ -10,6 +10,7 @@ import Avtorization from "./pages/avtorization";
 import Catalog from "./pages/catalog";
 import Service from "./pages/service";
 import Feedback from "./pages/feedback";
+import LikedProducts from "./pages/liked_products";
 
 export const Routes = () => {
   return (
@@ -43,6 +44,9 @@ export const Routes = () => {
       </Route>
       <Route path={"/feedback"}>
         <Feedback />
+      </Route>
+      <Route path={"/like"}>
+        <LikedProducts />
       </Route>
     </Switch>
   );
