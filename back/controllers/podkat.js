@@ -32,7 +32,7 @@ router.get('/podkategoriya/:id', async (req, res) => {
 router.delete('/podkategoriya/:id', async (req, res) => {
     try {
         const id = req.params.id
-        await podkat.destroy({
+        podkat.destroy({
             where: {
               id: id
             }

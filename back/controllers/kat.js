@@ -19,7 +19,7 @@ router.get('/kategories', async (req, res) => {
 router.get('/kategorie/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const kats = kat_device.findOne({ where: { id}})
+        kat_device.findOne({ where: { id}})
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
     } catch (e) {

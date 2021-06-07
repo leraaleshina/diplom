@@ -18,7 +18,7 @@ router.get('/product', async (req, res) => {
 router.get('/product/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const product = product.findOne({ where: { id: id }})
+        product.findOne({ where: { id: id }})
             .then(result => res.status(200).json(result))
             .catch(err => {throw Error(err)})
     } catch (e) {
@@ -31,7 +31,7 @@ router.get('/product/:id', async (req, res) => {
 router.delete('/product/:id', async (req, res) => {
     try {
         const id = req.params.id
-        await product.destroy({
+        product.destroy({
             where: {
               id
             }

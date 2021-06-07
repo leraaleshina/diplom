@@ -13,14 +13,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Clients.init({
-    surn_c: DataTypes.STRING, 
-    name_c: DataTypes.STRING, 
-    patr_c:DataTypes.STRING, 
-    address:DataTypes.STRING, 
-    ph_number_c:DataTypes.STRING, 
+    name_c: DataTypes.STRING,
     login_c:DataTypes.STRING, 
     password_c:DataTypes.STRING, 
-    photo_c:DataTypes.STRING
+    role:{
+      type: DataTypes.STRING,
+           defaultValue: "user"
+    }, 
   }, {
     sequelize,
     modelName: 'client',

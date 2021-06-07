@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.FLOAT,
     image: DataTypes.STRING,
     count: DataTypes.INTEGER,
-    color: DataTypes.STRING,
+    desc: DataTypes.STRING,
     id_podkat: {
       type: DataTypes.INTEGER,
     
