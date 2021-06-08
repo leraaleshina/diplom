@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 const{check, validationResult} = require('express-validator')
 const {client} = require('../models')
 const router = Router()
- 
+ const mailer = require('../helper/mailer')
 // /api/auth
 router.post(
     '/register', 
@@ -16,6 +16,7 @@ router.post(
     ],
     async (req, res) =>{
     try{
+        
         const errors = validationResult(req)
         console.log(req.body);
         if(!errors.isEmpty()){
@@ -24,7 +25,20 @@ router.post(
             })
         }
         const{name_c, login_c, password_c} = req.body
+        const message = {
+            from: 'kikusyyy@gmail.com', 
+            to: `${login_c}`, 
+            subject: "Регистрация завершена",
+            text: `Поздравляем, 
+            Вы успешно зарегистрировались на нашем сайте!
 
+            
+            Данные Вашей учетной записи:
+            Ваш email: ${login_c}
+            Ваш пароль: ${password_c}
+            `
+          }
+            mailer.main(message).catch(e => {throw Error(e)})
         const candidate = await client.findOne({where: {login_c} })
 
         if (candidate) {
@@ -37,7 +51,6 @@ router.post(
         .then(result => res.status(201).json({message: 'Пользователь создан', id:result.id}))
         .catch(err => {throw Error(err)})
 
-        console.log(hashedPassword);
 
     } catch (e){
         res.status(500).json({msg: e.message})
@@ -55,7 +68,6 @@ router.post(
     async (req, res) =>{
     try{
         const errors = validationResult(req)
-        console.log(req.body);
         if(!errors.isEmpty()){
             return res.status(400).json({
                 message: errors
@@ -75,7 +87,6 @@ router.post(
         .then(result => res.status(201).json({message: 'Админ создан', id:result.id}))
         .catch(err => {throw Error(err)})
 
-        console.log(hashedPassword);
 
     } catch (e){
         res.status(500).json({msg: e.message})
@@ -85,6 +96,7 @@ router.post(
  
 router.get('/clients', async (req, res) => {
     try {
+        
         client.findAll()
        .then(result => res.status(200).json(result))
        .catch(err => {throw Error(err)})

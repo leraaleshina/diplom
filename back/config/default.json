@@ -5,5 +5,7 @@
     "DB_USER": "postgres",
     "DB_PASSWORD": "applerina",
     "DB_HOST": "localhost",
-    "DB_PORT": 5432
+    "DB_PORT": 5432,
+    "username": "kikusyyy@gmail.com",
+    "password": "applerina"
 }
