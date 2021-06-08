@@ -3,6 +3,7 @@ const config = require('config')
 const sequelize = require('./db/db')
 const app = express()
 const cors = require('cors')
+const helmet = require("helmet");
 const auth = require('./controllers/auth.routes')
 const kat = require('./controllers/kat')
 const podkat = require('./controllers/podkat')
@@ -13,9 +14,11 @@ const sotrud = require('./controllers/sotrud')
 const work = require('./controllers/work')
 const stock = require('./controllers/stock')
 const PORT = config.get('port') || 5000
-const models = require('./models')
+
+
 app.use(express.json());
 app.use(cors())
+app.use(helmet());
 app.use('/api/auth', auth)
 app.use('/api', kat)
 app.use('/api', product)
@@ -25,6 +28,8 @@ app.use('/api', sotrud)
 app.use('/api', stock)
 app.use('/api', podkat)
 app.use('/api', work)
+
+
 async function start() {
     try{   
         await sequelize.authenticate();

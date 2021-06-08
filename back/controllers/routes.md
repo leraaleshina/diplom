@@ -197,13 +197,33 @@ endpoint: /work
 endpoint: /work/id
 
 ### Удаление работы по id
-метод: delete
+метод: delete\
 endpoint: /work/id
 
 ### Добавление работы
-метод: post
+метод: post\
 endpoint: /work/create
 
 ### Редактирование работы
-метод: put
+метод: put\
 endpoint: /work/update/id
+
+
+# Регистрация
+
+
+### Регистрация юзера
+метод: post\
+endpoint: /auth/register
+
+### Регистрация админа
+метод: post\
+endpoint: /auth/register_admin
+
+
+# Авторизация
+
+
+### Авторизация
+метод: post\
+endpoint: /auth/login
