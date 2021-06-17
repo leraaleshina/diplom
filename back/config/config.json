@@ -1,9 +1,0 @@
-{
-  "development": {
-    "username": "postgres",
-    "password": "applerina",
-    "database": "singaservice",
-    "host": "localhost",
-    "dialect": "postgres"
-  }
-}

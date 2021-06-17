@@ -4,7 +4,7 @@ const sequelize = require('./db/db')
 const app = express()
 const cors = require('cors')
 const helmet = require("helmet");
-const auth = require('./controllers/auth
+const auth = require('./controllers/auth')
 const kat = require('./controllers/kat')
 const podkat = require('./controllers/podkat')
 const product = require('./controllers/product')
@@ -12,6 +12,7 @@ const service = require('./controllers/service')
 const brand = require('./controllers/brand')
 const sotrud = require('./controllers/sotrud')
 const work = require('./controllers/work')
+const feedback = require('./controllers/feedback')
 const stock = require('./controllers/stock')
 const PORT = config.get('port') || 5000
 
@@ -28,6 +29,7 @@ app.use('/api', sotrud)
 app.use('/api', stock)
 app.use('/api', podkat)
 app.use('/api', work)
+app.use('/api', feedback)
 
 
 async function start() {

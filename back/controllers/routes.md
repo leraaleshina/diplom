@@ -7,7 +7,7 @@
 http://localhost:5000/api/kategories/
 
 ### Редактирование категории 
-метод: post\
+метод: put\
 http://localhost:5000/api/kategorie/update/id
 
 ### Поиск категории по id
@@ -221,9 +221,31 @@ endpoint: /auth/register
 endpoint: /auth/register_admin
 
 
-# Авторизация
-
-
 ### Авторизация
 метод: post\
 endpoint: /auth/login
+
+
+# Обратная связь
+### Просмотр 
+метод:get\
+endpoint: /feedback\
+
+### Создание 
+метод:post\
+endpoint: /feedback/create\
+ожидаемые поля:
+{
+name: STRING,\
+email: STRING,\
+msg: STRING\
+}
+
+### Поиск конкретной обр связи по id
+метод:get\
+endpoint: /feedback\:id
+
+### Поиск обр связи
+
+метод:get\
+endpoint: /feedback\
