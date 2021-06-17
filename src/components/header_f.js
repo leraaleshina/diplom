@@ -19,7 +19,7 @@ const FirstHeader = () => {
                 </a>
               </li>
               <li className={styles.header_item}>
-                <a href="#" className={styles.header_link}>
+                <a href="/service" className={styles.header_link}>
                   Услуги
                 </a>
               </li>

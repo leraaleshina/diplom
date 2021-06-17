@@ -1,14 +1,21 @@
 import React from 'react';
+import { useEffect, useState } from "react";
+import axios from "axios";
 import styles from '../css components/product.module.css';
 import pic1 from '../svg/pic-1.svg';
 import heart from '../svg/blue-heart.svg'
-import pict2 from '../svg/pic-2.svg';
-import pict3 from '../svg/pic-3.svg';
 import basket from '../svg/basket-icon.svg'
 import { Header } from '../components/header.js'
 import { Question } from '../components/footer_question.js'
 
 const Product = () => {
+    const [data, setData] = useState([])
+    const getProducts = async () => {
+        axios.get('http://localhost:5000/api/product/'+window.location.pathname.split("/")[2]).then(data=>setData(data.data))
+        }
+        useEffect(() => { 
+            getProducts()
+        }, [])
     return (
         <section className={styles.prod}>
             <Header />
@@ -16,13 +23,13 @@ const Product = () => {
             <div className={styles.wrapper}>
                 <button className={styles.button}>Вернуться</button>
                 <div className={styles.product}>
-                    <img src={pic1} alt="" className={styles.picture} />
+                    <img src={data.image} alt="" className={styles.picture} />
                     <div className={styles.block_text}>
-                        <h5 className={styles.title}>Беспроводная зарядка BH35 Magnetic автомобильный держатель</h5>
+                        <h5 className={styles.title}>{data.name_prod}</h5>
                         <p className={styles.description}>
-                            BOROFONE BH35 Magnetic автомобильный держатель с беспроводной зарядкой для воздуховода / панели приборов, выход 5W/7.5W/10W/15W
+                            {data.desc && data.desc}
                 </p>
-                        <span className={styles.price}>2000 рублей</span>
+                        <span className={styles.price}>{data.price && data.price} рублей</span>
                         <div className={styles.order}>
                             <button className={styles.button_order}>Добавить в корзину</button>
                             <a href="" className="link">

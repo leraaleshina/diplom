@@ -3,6 +3,42 @@ import styles from '../css components/avtorization.module.css';
 import { Link } from 'react-router-dom'
 import desktop from '../svg/desktop.svg';
 
+// const Authentication = (props) => {
+//     const isLogin = props.match.path === "/login";
+//     const pageTitle = isLogin ? "Sign In" : "Sign Up";
+//     const descriptionLink = isLogin ? "/register" : "/login";
+//     const descriptionText = isLogin ? "Need an account ?" : "Have an account ?";
+//     const apiUrl = isLogin ? "/users/login" : "/users";
+//     const [email, setEmail] = useState("");
+//     const [password, setPassword] = useState("");
+//     const [username, setUsername] = useState("");
+//     const [isSuccessfullSubmit, setIsSuccessfullSubmit] = useState(false);
+//     const [{ response, isLoading, error }, doFetch] = useFetch(apiUrl);
+//     const [token, setToken] = useLocalStorage("token");
+//     const [, dispatch] = useContext(CurrentUserContext);
+//     const handleSubmit = (e) => {
+//       e.preventDefault();
+//       const user = isLogin ? { email, password } : { email, password, username };
+//       doFetch({
+//         method: "post",
+//         data: {
+//           user,
+//         },
+//       });
+//     };
+  
+//     useEffect(() => {
+//       if (!response) return;
+//       setToken(response.user.token);
+//       setIsSuccessfullSubmit(true);
+//       dispatch({ type: "SET_AUTHORIZED", payload: response.user });
+//     }, [response, setToken, dispatch]);
+  
+//     if (isSuccessfullSubmit) {
+//       return <Redirect to="/" />;
+//     }
+
+
 const Avtorization = () => {
     return (
         <div className={styles.background}>
@@ -47,4 +83,4 @@ const Avtorization = () => {
     )
 }
 
-export default Avtorization
+export default Avtorization;

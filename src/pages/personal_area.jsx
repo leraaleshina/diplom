@@ -1,11 +1,6 @@
 import React from 'react';
 import styles from '../css components/personal_area.module.css';
 import personal_photo from '../svg/personal_photo.svg'
-import pic1 from '../svg/pic-1.svg';
-import pic2 from '../svg/pic-2.svg';
-import pic3 from '../svg/pic-3.svg';
-import basket from '../svg/basket-icon.svg'
-import heart from '../svg/red-heart.svg'
 import { Header } from '../components/header.js'
 import { Footer } from '../components/footer.js'
 import Slick from '../components/slider'

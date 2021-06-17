@@ -21,9 +21,16 @@
 
 .kat_service {
   margin-top: 79px;
-  padding: 76px 150px;
   background: #b0dcff;
   border-radius: 30px;
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+
+.active {
+  padding: 76px 150px;
+  opacity: 1;
+  transition: opacity .5s ease-in;
 }
 
 .name_wrapper {

@@ -1,23 +1,29 @@
 import React from "react";
-import styles from '../css components/liked_products.module.css';
+import styles from '../css components/like.module.css';
 import pic1 from '../svg/pic-1.svg';
-import pic2 from '../svg/pic-2.svg';
-import pic3 from '../svg/pic-3.svg';
 import heart from '../svg/red-heart.svg'
+import { Header } from '../components/header.js'
+import { Footer } from '../components/footer.js'
 
-const LikedProducts = () =>{
+const Like = () =>{
     return(
-        <section>
+        <section className={styles.basket}>
+            <Header />
             <div className={styles.bg}>
+                <h1 className={styles.title}>Понравившиеся товары</h1>
                 <div className={styles.cards}>
                     <div className={styles.block_links}>
                         <nav>
                             <ul className={styles.block_item}>
-                                <li className={styles.item}>
-                                Корзина
+                            <li className={styles.item}>
+                                    <a href="/basket">
+                                    Корзина
+                                    </a>
                                 </li>
                                 <li className={styles.item}>
-                                Понравившиеся товары
+                                    <a href="/like">
+                                    Понравившиеся товары
+                                    </a>
                                 </li>
                             </ul>
                         </nav>
@@ -63,7 +69,7 @@ const LikedProducts = () =>{
                         <span className={styles.price}>
                             2300 рублей
                         </span>
-                        <img src={heart} alt="" className={styles.image} />
+                        <img src={heart} alt="" className={styles.image} />                       
                         </div>
                     </div>
 
@@ -74,14 +80,15 @@ const LikedProducts = () =>{
                         <span className={styles.price}>
                             2300 рублей
                         </span>
-                        <img src={heart} alt="" className={styles.image} />
+                        <img src={heart} alt="" className={styles.image} />                     
                         </div>
                     </div>
 
                 </div>
             </div>
+            <Footer />
         </section>  
         )
 }
 
-export default LikedProducts;
+export default Like;

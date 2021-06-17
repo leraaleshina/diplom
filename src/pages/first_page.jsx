@@ -5,7 +5,7 @@ import { Footer } from '../components/footer.js'
 import { Link } from 'react-router-dom'
 
 
-const First_page = () => {
+const FirstPage = () => {
     return (
         <section className="first_block">
             <First_header />
@@ -16,7 +16,7 @@ const First_page = () => {
                     </h3>
                     <p className={styles.description}>
                     В нашем интернет магазине Вы сможете заказать различные аксессуары для вашего устройства, чехлы, а так же переферийные устройства.
-                     Мы осуществляем доставку по городу Ростову-на-Дону, а так же по Ростовской области. Доставка осуществляется от 2 до 5 рабочих дней.
+                     Мы осуществляем доставку по городу Ростову-на-Дону, а так же по Ростовской области.
                     </p>
                     <Link to ={'/pages/catalog'}> <button className={styles.button}>Подробнее</button> </Link>
                 </div>
@@ -36,4 +36,4 @@ const First_page = () => {
     )
 }
 
-export default First_page;
+export default FirstPage;

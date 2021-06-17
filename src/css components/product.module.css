@@ -1,199 +1,203 @@
-.background{
-    background-image: url(../svg/description.svg);
-    background-repeat: no-repeat;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
-    height: 150vh;
+.background {
+  background-image: url(../svg/description.svg);
+  background-repeat: no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
 }
 
-.button{
-    font-family: 'Comfortaa', cursive;
-    font-weight: 300;
-    font-size: 18px;
-    width: 180px;
-    height: 44px;
-    margin-top: 60px;
-    margin-left: 120px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background-color: #1194FF;
-    color: #F3FBFF;
-    border-radius: 63px;
-    border: none;
+.button {
+  font-family: "Comfortaa", cursive;
+  font-weight: 300;
+  font-size: 18px;
+  width: 180px;
+  height: 44px;
+  margin-top: 60px;
+  margin-left: 120px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: #1194ff;
+  color: #f3fbff;
+  border-radius: 63px;
+  border: none;
 }
 
-.product{
-    display: flex;
-    margin-top: 73px;
-    margin-left: 120px;
+.product {
+  display: flex;
+  margin-top: 73px;
+  margin-left: 120px;
 }
 
-.title{
-    margin: 0;
-    font-weight: 300;
-    font-size: 30px;
-    color: #02265C;
-    max-width: 630px;;
+.title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 30px;
+  color: #02265c;
+  max-width: 630px;
 }
 
-.block_text{
-    margin-left: 45px;
-    display: flex;
-    flex-direction: column;
+.block_text {
+  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
 }
 
-.description{
-    font-weight: 300;
-    font-size: 22px;
-    max-width: 588px;
-    color: #02265C;
+.description {
+  font-weight: 300;
+  font-size: 22px;
+  max-width: 588px;
+  color: #02265c;
 }
 
-.button_order{
-    font-family: 'Comfortaa', cursive;
-    font-weight: 300;
-    font-size: 18px;
-    width: 285px;
-    height: 44px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background-color: #1194FF;
-    color: #F3FBFF;
-    border-radius: 63px;
-    border: none;
+.button_order {
+  font-family: "Comfortaa", cursive;
+  font-weight: 300;
+  font-size: 18px;
+  width: 285px;
+  height: 44px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: #1194ff;
+  color: #f3fbff;
+  border-radius: 63px;
+  border: none;
 }
 
-.price{
-    font-weight: 300;
-    font-size: 22px;
-    color: #02265C;
+.price {
+  font-weight: 300;
+  font-size: 22px;
+  color: #02265c;
 }
 
-.order{
-    display: flex;
-    flex-direction: row;
-    margin-top: 11px;
+.order {
+  display: flex;
+  flex-direction: row;
+  margin-top: 11px;
 }
 
-.heart{
-    margin-left: 41px;
+.heart {
+  margin-left: 41px;
 }
 
-.cards{
-    display: flex;
-    flex-direction: row;
-    margin-top: 68px;
+.cards {
+  display: flex;
+  flex-direction: row;
+  margin-top: 68px;
 }
 
-.same_block{
-    margin-left: 120px;
-    margin-top: 84px;
+.same_block {
+  margin-left: 120px;
+  margin-top: 84px;
 }
 
-.card{
-    margin-right: 93px;
+.card {
+  margin-right: 93px;
 }
 
-.same_title{
-    font-weight: normal;
-    font-size: 36px;
-    color: #02265C;
+.same_title {
+  font-weight: normal;
+  font-size: 36px;
+  color: #02265c;
 }
 
-.price_block{
-    margin-top: 22px;
+.price_block {
+  margin-top: 22px;
 }
 
-.cost{
-    font-weight: normal;
+.cost {
+  font-weight: normal;
+  font-size: 24px;
+  color: #02265c;
+  margin-right: 85px;
+  margin-left: 24px;
+}
+
+.icon {
+  margin-right: 16px;
+}
+
+.picture {
+  width: 456.4px;
+  height: 436px;
+}
+
+@media (width: 768px) {
+  .background {
+    background-position: left center;
+    height: 155vh;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 168px;
+    height: 32px;
+    margin-top: 30px;
+    margin-left: 40px;
+  }
+
+  .product {
+    margin-top: 30px;
+    margin-left: 40px;
+  }
+
+  .picture {
+    width: 300px;
+    height: 300px;
+  }
+
+  .title {
     font-size: 24px;
-    color: #02265C;
-    margin-right: 85px;
-    margin-left: 24px;
-}
+    max-width: 330px;
+  }
 
-.icon{
-    margin-right: 16px;
-}
+  .description {
+    font-size: 16px;
+    max-width: 250px;
+  }
 
-@media(width:768px){
-    .background{
-        background-position: left center;
-        height: 155vh;
-    }
+  .button_order {
+    font-size: 14px;
+    width: 200px;
+    height: 32px;
+  }
 
-    .button{
-        font-size: 14px;
-        width: 168px;
-        height: 32px;
-        margin-top: 30px;
-        margin-left: 40px;
-    }
+  .heart {
+    margin-left: 25px;
+  }
 
-    .product{
-        margin-top: 30px;
-        margin-left: 40px;
-    }
+  .same_block {
+    margin-left: 50px;
+    margin-top: 44px;
+  }
 
-    .picture{
-        width: 300px;
-        height: 300px;
-    }
+  .same_title {
+    font-size: 30px;
+  }
 
-    .title{
-        font-size: 24px;
-        max-width: 330px;;
-    }
+  .card {
+    margin-right: 40px;
+  }
 
-    .description{
-        font-size: 16px;
-        max-width: 250px;
-    }
+  .photo {
+    width: 200px;
+    height: 200px;
+  }
 
-    .button_order{
-        font-size: 14px;
-        width: 200px;
-        height: 32px;
-    }
+  .cost {
+    font-size: 16px;
+    margin-right: 40px;
+    margin-left: 12px;
+  }
 
-    .heart{
-        margin-left: 25px;
-    }
+  .price_block {
+    margin: 0;
+  }
 
-    .same_block{
-        margin-left: 50px;
-        margin-top: 44px;
-    }
-    
-    .same_title{
-        font-size: 30px;
-    }
+  .cards {
+    margin-top: 20px;
+  }
 
-    .card{
-        margin-right: 40px;
-    }
-
-    .photo{
-        width: 200px;
-        height: 200px;
-    }
-
-    .cost{
-        font-size: 16px;
-        margin-right: 40px;
-        margin-left: 12px;
-    }
-
-    .price_block{
-        margin: 0;
-    }
-
-    .cards{
-        margin-top: 20px;
-    }
-    
-    .icon{
-        height: 20px;
-        width: 20px;
-    }
+  .icon {
+    height: 20px;
+    width: 20px;
+  }
 }

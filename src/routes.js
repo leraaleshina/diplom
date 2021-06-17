@@ -4,19 +4,20 @@ import Delivery from "./pages/delivery";
 import Contact from "./pages/contact";
 import Persona from "./pages/personal_area";
 import Product from "./pages/product";
-import First_page from "./pages/first_page";
+import FirstPage from "./pages/first_page";
 import Registration from "./pages/registration";
 import Avtorization from "./pages/avtorization";
 import Catalog from "./pages/catalog";
 import Service from "./pages/service";
 import Feedback from "./pages/feedback";
-import LikedProducts from "./pages/liked_products";
+import Basket from "./pages/basket";
+import Like from "./pages/like";
 
 export const Routes = () => {
   return (
     <Switch>
       <Route path={"/"} exact>
-        <First_page />
+        <FirstPage />
       </Route>
       <Route path={"/contact"}>
         <Contact />
@@ -27,7 +28,7 @@ export const Routes = () => {
       <Route path={"/persona"}>
         <Persona />
       </Route>
-      <Route path={"/products"}>
+      <Route path={"/product"}>
         <Product />
       </Route>
       <Route path={"/avtorization"}>
@@ -45,8 +46,11 @@ export const Routes = () => {
       <Route path={"/feedback"}>
         <Feedback />
       </Route>
+      <Route path={"/basket"}>
+        <Basket />
+      </Route>
       <Route path={"/like"}>
-        <LikedProducts />
+        <Like />
       </Route>
     </Switch>
   );
