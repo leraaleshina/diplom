@@ -38,13 +38,15 @@ router.post(
             Ваш пароль: ${password_c}
             `
           }
-            mailer.main(message).catch(e => {throw Error(e)})
+           
         const candidate = await client.findOne({where: {login_c} })
 
         if (candidate) {
             return res.status(400).json({ message: 'Такой пользователь уже существует'})
         }
 
+        mailer.main(message).catch(e => {throw Error(e)})
+        
         const hashedPassword = await bcrypt.hash(password_c, 5)
 
         client.create({name_c, login_c, password_c: hashedPassword})
