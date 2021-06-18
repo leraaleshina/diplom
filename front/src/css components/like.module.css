@@ -1,0 +1,66 @@
+.bg {
+  background-image: url(../svg/bg_contact.svg);
+  background-repeat: no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+}
+.title {
+  font-weight: bold;
+  font-size: 48px;
+  color: #f3fbff;
+  background-image: url(/src/svg/bg_basket.svg);
+  background-repeat: no-repeat;
+  width: 800px;
+  padding: 25px 12px 40px 90px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 133px;
+}
+
+.bg :last-child {
+  margin-bottom: 0;
+}
+
+.block_links {
+  margin-right: 170px;
+}
+
+.card {
+  margin-right: 93px;
+}
+
+.item {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 140.62%;
+  color: #02265c;
+}
+
+.like {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 15px 0 20px;
+}
+
+.check {
+  width: 30px;
+  height: 30px;
+  margin-right: 18px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  font-size: 20px;
+  color: #02265c;
+}

@@ -1,0 +1,251 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 140.62%;
+  display: flex;
+  color: #02265c;
+  width: 1199px;
+}
+
+.background {
+  box-shadow: 1px 1px 39px 14px rgba(17, 148, 255, 0.25);
+  background-image: url(../svg/feedback_svg.svg);
+  background-repeat: no-repeat;
+  width: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 171px 63px 69px 111px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 140.62%;
+  color: #02265c;
+}
+
+.form_input {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 11px;
+  padding: 11px 134px 10px 12px;
+  margin-bottom: 22px;
+}
+
+.text {
+  padding: 18px 350px 152px 28px;
+  border: 1px solid #000000;
+  border-radius: 11px;
+}
+
+.button {
+  background: #1194ff;
+  border-radius: 63px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: none;
+  color: #f3fbff;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 140.62%;
+  padding: 8px 64px;
+  margin-top: 46px;
+}
+
+@media (max-width: 2041px) {
+  .description {
+    font-size: 34px;
+    width: 1700px;
+  }
+}
+
+@media (max-width: 1621px) {
+  .description {
+    font-size: 28px;
+    width: 1400px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .description {
+    font-size: 24px;
+    width: 1200px;
+  }
+}
+
+@media (max-width: 1161px) {
+  .description {
+    font-size: 22px;
+    width: 1100px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .description {
+    width: 900px;
+  }
+}
+
+@media (max-width: 871px) {
+  .description {
+    font-size: 20px;
+    width: 800px;
+  }
+}
+@media (max-width: 769px) {
+  .description {
+    font-size: 18px;
+    width: 700px;
+  }
+}
+
+@media (max-width: 721px) {
+  .description {
+    font-size: 18px;
+    width: 700px;
+  }
+
+  .background {
+    width: 650px;
+  }
+
+  .text {
+    padding: 18px 300px 132px 28px;
+  }
+}
+
+@media (max-width: 641px) {
+  .description {
+    font-size: 16px;
+    width: 630px;
+  }
+
+  .background {
+    width: 500px;
+  }
+
+  .text {
+    padding: 18px 230px 112px 28px;
+  }
+  .card {
+    padding: 70px 0px 8px 0px;
+  }
+
+  .button {
+    padding: 8px 64px;
+    margin-top: 26px;
+  }
+}
+
+@media (max-width: 561px) {
+  .description {
+    font-size: 16px;
+    width: 450px;
+  }
+}
+
+@media (max-width: 441px) {
+  .description {
+    font-size: 14px;
+    width: 400px;
+  }
+
+  .background {
+    width: 400px;
+  }
+
+  .text {
+    padding: 18px 150px 80px 28px;
+  }
+  .card {
+    padding: 50px 0px 12px 0px;
+  }
+
+  .button {
+    padding: 8px 64px;
+    margin-top: 26px;
+  }
+}
+
+@media (max-width: 415px) {
+  .card {
+    padding: 20px 0px 12px 0px;
+  }
+
+  .background {
+    width: 350px;
+  }
+  .description {
+    font-size: 14px;
+    width: 350px;
+  }
+
+  .title {
+    font-size: 26px;
+    color: #f3fbff;
+  }
+
+  .form_input {
+    margin-bottom: 12px;
+  }
+
+  .text {
+    padding: 18px 130px 80px 28px;
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 0;
+    margin-top: 16px;
+    width: 150px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 376px) {
+  .description {
+    font-size: 12px;
+    width: 310px;
+  }
+
+  .background {
+    width: 320px;
+  }
+
+  .card {
+    padding: 20px 0px 12px 0px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .form_input {
+    padding: 8px 80px 8px 12px;
+    margin-bottom: 8px;
+    font-size: 8px;
+  }
+
+  .text {
+    padding: 8px 100px 60px 20px;
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,264 @@
+.all_header {
+  background-image: url("../svg/header2.svg");
+  background-repeat: no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+}
+
+.header_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 19px 120px 140px 95px;
+}
+
+.header_list {
+  display: flex;
+  flex-direction: row;
+}
+
+.header_item {
+  list-style-type: none;
+  margin-right: 25px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.header_menu {
+  display: flex;
+  flex-direction: row;
+  margin-top: 45px;
+}
+
+.header_link {
+  color: #f3fbff;
+}
+
+.header_button {
+  font-family: "Comfortaa", cursive;
+  font-weight: 300;
+  font-size: 18px;
+  width: 200px;
+  height: 44px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: #1194ff;
+  color: #f3fbff;
+  border-radius: 63px;
+  border: none;
+}
+
+@media (max-width: 2041px) {
+  .header_links {
+    padding: 40px 130px 215px 95px;
+  }
+
+  .header_item {
+    font-size: 26px;
+  }
+
+  .header_button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1830px) {
+  .header_links {
+    padding: 40px 130px 140px 95px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .header_links {
+    padding: 40px 130px 100px 95px;
+  }
+  .header_item {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1216px) {
+  .header_links {
+    padding: 19px 50px 85px 95px;
+  }
+}
+
+@media (max-width: 1161px) {
+  .header_links {
+    padding: 19px 100px 85px 95px;
+  }
+  .header_item {
+    font-size: 18px;
+  }
+
+  .header_button {
+    font-size: 16px;
+    width: 185px;
+    height: 35px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .header_item {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+
+  .header_menu {
+    margin-top: 25px;
+  }
+
+  .header_links {
+    padding: 19px 70px 85px 15px;
+  }
+}
+
+@media (max-width: 871px) {
+  .header_links {
+    padding: 19px 60px 40px 10px;
+  }
+
+  .header_item {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .header_button {
+    font-size: 14px;
+    width: 155px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 769px) {
+  .header_links {
+    padding: 19px 50px 30px 9px;
+  }
+
+  .header_item {
+    margin-right: 13px;
+    font-size: 12px;
+  }
+
+  .header_button {
+    font-size: 13px;
+    width: 110px;
+    height: 25px;
+    margin-top: 10px;
+  }
+
+  .header_menu {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 721px) {
+  .logoimage {
+    height: 65px;
+    width: 65px;
+  }
+  .header_item {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+
+  .header_menu {
+    margin-top: 5px;
+  }
+
+  .header_links {
+    padding: 19px 40px 40px 9px;
+  }
+
+  .header_list {
+    padding: 0;
+  }
+}
+
+@media (max-width: 641px) {
+  .header_links {
+    padding: 19px 35px 25px 9px;
+  }
+
+  .header_item {
+    margin-right: 10px;
+    font-size: 10px;
+  }
+
+  .header_button {
+    font-size: 10px;
+    width: 110px;
+    height: 25px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 561px) {
+  .logoimage {
+    height: 55px;
+    width: 55px;
+  }
+
+  .header_links {
+    padding: 10px 15px 30px 9px;
+  }
+
+  .header_item {
+    margin-right: 7px;
+    font-size: 9px;
+  }
+
+  .header_button {
+    font-size: 12px;
+    width: 110px;
+    height: 25px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 441px) {
+  .logoimage {
+    height: 35px;
+    width: 35px;
+  }
+
+  .header_links {
+    padding: 10px 10px 27px 9px;
+  }
+
+  .header_menu {
+    margin-top: 0px;
+  }
+
+  .header_item {
+    margin-right: 7px;
+    font-size: 8px;
+  }
+
+  .header_button {
+    font-size: 8px;
+    width: 80px;
+    height: 15px;
+    margin-top: 12px;
+  }
+}
+
+@media (width: 421px) {
+  .header_links {
+    padding: 19px 25px 0px 9px;
+  }
+}
+
+@media (max-width: 415px) {
+  .header_links {
+    padding: 10px 15px 24px 9px;
+  }
+}
+
+@media (max-width: 376px) {
+  .header_links {
+    padding: 0px 0px 30px 0px;
+  }
+}
