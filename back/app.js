@@ -4,18 +4,6 @@ const sequelize = require("./db/db");
 const app = express();
 const cors = require("cors");
 const helmet = require("helmet");
-<<<<<<< HEAD
-const auth = require("./controllers/auth.routes");
-const kat = require("./controllers/kat");
-const podkat = require("./controllers/podkat");
-const product = require("./controllers/product");
-const service = require("./controllers/service");
-const brand = require("./controllers/brand");
-const sotrud = require("./controllers/sotrud");
-const work = require("./controllers/work");
-const stock = require("./controllers/stock");
-const PORT = 4000;
-=======
 const auth = require('./controllers/auth')
 const kat = require('./controllers/kat')
 const podkat = require('./controllers/podkat')
@@ -28,22 +16,10 @@ const feedback = require('./controllers/feedback')
 const stock = require('./controllers/stock')
 const PORT = config.get('port') || 5000
 
->>>>>>> da8ec6bbd10b0f208389d9e058a1fd264b0c38b7
 
 app.use(express.json());
 app.use(cors());
 app.use(helmet());
-<<<<<<< HEAD
-app.use("/api/auth", auth);
-app.use("/api", kat);
-app.use("/api", product);
-app.use("/api", service);
-app.use("/api", brand);
-app.use("/api", sotrud);
-app.use("/api", stock);
-app.use("/api", podkat);
-app.use("/api", work);
-=======
 app.use('/api/auth', auth)
 app.use('/api', kat)
 app.use('/api', product)
@@ -55,7 +31,6 @@ app.use('/api', podkat)
 app.use('/api', work)
 app.use('/api', feedback)
 
->>>>>>> da8ec6bbd10b0f208389d9e058a1fd264b0c38b7
 
 async function start() {
   try {
