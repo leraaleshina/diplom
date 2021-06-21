@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 const{check, validationResult} = require('express-validator')
 const {client} = require('../models')
 const router = Router()
- const mailer = require('../helper/mailer')
+const mailer = require('../helper/mailer')
 // /api/auth
 router.post(
     '/register', 
@@ -27,7 +27,7 @@ router.post(
         const{name_c, login_c, password_c} = req.body
         const message = {
             from: 'kikusyyy@gmail.com', 
-            to: `${login_c}`, 
+            to: login_c, 
             subject: "Регистрация завершена",
             text: `Поздравляем, 
             Вы успешно зарегистрировались на нашем сайте!
