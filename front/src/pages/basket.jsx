@@ -1,11 +1,21 @@
 import React from "react";
 import styles from '../css components/basket.module.css';
-import pic1 from '../svg/pic-1.svg';
-import heart from '../svg/red-heart.svg'
 import { Header } from '../components/header.js'
 import { Footer } from '../components/footer.js'
+import { useDispatch, useSelector } from 'react-redux';
+import BasketItem from '../components/basketItem'
+import { NavLink as Link } from "react-router-dom";
+import { deleteProductFromBasket } from '../redux/actions/basket'
 
-const Basket = () =>{
+const Basket = () => {
+
+    const dispatch = useDispatch()
+
+    const {items, totalProducts} = useSelector(state => ({
+        items: state.basket.items,
+        totalProducts: state.basket.totalProducts,
+    }))
+
     return(
         <section className={styles.basket}>
             <Header />
@@ -21,84 +31,20 @@ const Basket = () =>{
                                     </a>
                                 </li>
                                 <li className={styles.item}>
-                                    <a href="/like">
+                                    <Link to="/like">
                                     Понравившиеся товары
-                                    </a>
+                                    </Link>
+                                </li>
+                                <li>
+                                    Итого: {totalProducts}
                                 </li>
                             </ul>
                         </nav>
                     </div>
-
-                    <div className={styles.card}>
-                        <img src={pic1} alt="" className={styles.image} />
-                        <div className={styles.like}>
-                        <span className={styles.price}>
-                            2300 рублей
-                        </span>
-                        <div className={styles.icons}>
-                        <input type="checkbox" className={styles.check} />
-                        <img src={heart} alt="" className={styles.image} />
-                        </div>
-                        </div>
+                    <div class={styles.product_list}>
+                        {items && items.map((product, i) => <BasketItem key={i} {...product} />)}
                     </div>
-
                     
-                    <div className={styles.card}>
-                        <img src={pic1} alt="" className={styles.image} />
-                        <div className={styles.like}>
-                        <span className={styles.price}>
-                            2300 рублей
-                        </span>
-                        <div className={styles.icons}>
-                        <input type="checkbox" className={styles.check} />
-                        <img src={heart} alt="" className={styles.image} />
-                        </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className={styles.cards}>
-                <div className={styles.card}>
-                        <img src={pic1} alt="" className={styles.image} />
-                        <div className={styles.like}>
-                        <span className={styles.price}>
-                            2300 рублей
-                        </span>
-                        <div className={styles.icons}>
-                        <input type="checkbox" className={styles.check} />
-                        <img src={heart} alt="" className={styles.image} />
-                        </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.card}>
-                        <img src={pic1} alt="" className={styles.image} />
-                        <div className={styles.like}>
-                        <span className={styles.price}>
-                            2300 рублей
-                        </span>
-                        <div className={styles.icons}>
-                        <input type="checkbox" className={styles.check} />
-                        <img src={heart} alt="" className={styles.image} />
-                        </div>
-                        </div>
-                    </div>
-
-                    
-                    <div className={styles.card}>
-                        <img src={pic1} alt="" className={styles.image} />
-                        <div className={styles.like}>
-                        <span className={styles.price}>
-                            2300 рублей
-                        </span>
-                        <div className={styles.icons}>
-                        <input type="checkbox" className={styles.check} />
-                        <img src={heart} alt="" className={styles.image} />
-                        </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
             <Footer />

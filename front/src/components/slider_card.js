@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../css components/slider.module.css";
 function SliderCard({ card }) {
-  console.log(card);
   return (
     <div
       className={styles.card}

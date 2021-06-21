@@ -2,9 +2,9 @@ import { Header } from "../components/header.js";
 import { Footer } from "../components/footer.js";
 import React from "react";
 import styles from "../css components/feedback.module.css";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
-const Feedback = () => {
+const Recording = () => {
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [text, setText] = React.useState('');
@@ -16,16 +16,6 @@ const Feedback = () => {
   const [nameError, setNameError] = React.useState("Введите имя");
   const [emailError, setEmailError] = React.useState("Введите E-mail");
   const [textError, setTextError] = React.useState("Оставьте комментарий");
-
-  const [formValid, setFormValid] = React.useState(false)
-
-  React.useEffect( () => { 
-    if(nameError || emailError || textError){
-      setFormValid(false)
-    }else{
-      setFormValid(true)
-    }
-  }, [emailError, nameError, textError])
 
   const blurHandler = (e) => {
     switch (e.target.name) {
@@ -71,28 +61,13 @@ const Feedback = () => {
     }
   }
 
-  const handlerSendForm = () => {
-    axios.post('http://45.90.34.137:5000/api/feedback/create', {
-      name,
-      email,
-      msg: text,
-    }).then(response => console.log(response))
-    .catch(error => console.error(error))
-  }
-  
-  
   return (
     <div>
       <Header />
       <div className={styles.feedback}>
-        <p className={styles.description}>
-          Здесь Вы можете написать ваши пожелания, претензии и предложения по
-          улучшению нашего сервиса. Мы всегда рады нашим клиентам и учитываем их
-          мнение!
-        </p>
         <div className={styles.background}>
           <div className={styles.card}>
-            <h3 className={styles.title}>Обратная связь</h3>
+            <h3 className={styles.title}>Запись на услугу</h3>
             <div className={styles.form}>
               {(nameDirty && nameError) && 
                 <div style={{ color: 'red' }}>{nameError}</div>
@@ -124,8 +99,11 @@ const Feedback = () => {
               onBlur = {e => blurHandler(e)}
               className={styles.text}
               name="text"
-              placeholder="Введите текст"></textarea>
-              <button onClick={handlerSendForm} disabled = {!formValid} className={styles.button}>Отправить</button>
+              placeholder="Опишите вашу проблему с устройством и услугу, на которую хотели бы записаться"></textarea>
+            <Link to={"/"}>
+              {" "}
+              <button className={styles.button}>Отправить</button>{" "}
+            </Link>
           </div>
         </div>
       </div>
@@ -134,4 +112,4 @@ const Feedback = () => {
   );
 };
 
-export default Feedback;
+export default Recording;

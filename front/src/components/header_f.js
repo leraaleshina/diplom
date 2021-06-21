@@ -7,36 +7,41 @@ const FirstHeader = () => {
   return (
     <header className={styles.header_first}>
       <div className={styles.header_links}>
-        <a href="/" className={styles.header_logo_link}>
+        <Link to="/" className={styles.header_logo_link}>
           <img src={logoimage} alt="logo" className={styles.logoimage} />
-        </a>
+        </Link>
         <div className={styles.header_menu}>
           <nav className={styles.header_nav}>
             <ul className={styles.header_list}>
               <li className={styles.header_item}>
-                <a href="/catalog" className={styles.header_link}>
+                <Link to="/catalog" className={styles.header_link}>
                   Товары
-                </a>
+                </Link>
               </li>
               <li className={styles.header_item}>
-                <a href="/service" className={styles.header_link}>
+                <Link to="/service" className={styles.header_link}>
                   Услуги
-                </a>
+                </Link>
               </li>
               <li className={styles.header_item}>
-                <a href="/contact" className={styles.header_link}>
+                <Link to="/contact" className={styles.header_link}>
                   Контакты
-                </a>
+                </Link>
               </li>
               <li className={styles.header_item}>
-                <a href="/feedback" className={styles.header_link}>
+                <Link to="/feedback" className={styles.header_link}>
                   Обратная сявзь
-                </a>
+                </Link>
               </li>
               <li className={styles.header_item}>
-                <a href="/delivery" className={styles.header_link}>
+                <Link to="/delivery" className={styles.header_link}>
                   Доставка
-                </a>
+                </Link>
+              </li>
+              <li className={styles.header_item}>
+                <Link to="/basket" className={styles.header_link}>
+                  Корзина
+                </Link>
               </li>
             </ul>
           </nav>

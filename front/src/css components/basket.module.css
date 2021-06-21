@@ -1,11 +1,3 @@
-.bg {
-  background-image: url(../svg/bg_contact.svg);
-  background-repeat: no-repeat;
-  -moz-background-size: 100%; /* Firefox 3.6+ */
-  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-  -o-background-size: 100%; /* Opera 9.6+ */
-  background-size: 100%; /* Современные браузеры */
-}
 .title {
   font-weight: bold;
   font-size: 48px;
@@ -21,21 +13,41 @@
 
 .cards {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  margin-bottom: 133px;
+  flex-direction: column;
+}
+
+.product_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 25px;
+}
+
+.card_top .image {
+  width: 250px;
+  height: 250px;
+  background: rgb(143, 141, 141);
 }
 
 .bg :last-child {
   margin-bottom: 0;
 }
 
-.block_links {
-  margin-right: 170px;
+.remove {
+  cursor: pointer;
 }
 
-.card {
-  margin-right: 93px;
+.block_links {
+  margin-right: 10px;
+}
+
+.card img {
+  max-width: 200px;
 }
 
 .item {
@@ -49,13 +61,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5px 15px 0 20px;
 }
 
 .check {
   width: 30px;
   height: 30px;
-  margin-right: 18px;
+  margin-right: 40px;
 }
 
 .price {
@@ -64,4 +75,8 @@
   font-weight: normal;
   font-size: 20px;
   color: #02265c;
+}
+
+@media(max-width:1025px){
+
 }

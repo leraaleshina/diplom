@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 19px 120px 140px 95px;
+  padding: 19px 20px 140px 45px;
 }
 
 .header_list {
@@ -49,56 +49,6 @@
   border: none;
 }
 
-@media (max-width: 2041px) {
-  .header_links {
-    padding: 40px 130px 215px 95px;
-  }
-
-  .header_item {
-    font-size: 26px;
-  }
-
-  .header_button {
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 1830px) {
-  .header_links {
-    padding: 40px 130px 140px 95px;
-  }
-}
-
-@media (max-width: 1420px) {
-  .header_links {
-    padding: 40px 130px 100px 95px;
-  }
-  .header_item {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1216px) {
-  .header_links {
-    padding: 19px 50px 85px 95px;
-  }
-}
-
-@media (max-width: 1161px) {
-  .header_links {
-    padding: 19px 100px 85px 95px;
-  }
-  .header_item {
-    font-size: 18px;
-  }
-
-  .header_button {
-    font-size: 16px;
-    width: 185px;
-    height: 35px;
-    margin-top: 10px;
-  }
-}
 
 @media (max-width: 1025px) {
   .header_item {
@@ -111,30 +61,13 @@
   }
 
   .header_links {
-    padding: 19px 70px 85px 15px;
-  }
-}
-
-@media (max-width: 871px) {
-  .header_links {
-    padding: 19px 60px 40px 10px;
-  }
-
-  .header_item {
-    font-size: 14px;
-    margin-right: 10px;
-  }
-
-  .header_button {
-    font-size: 14px;
-    width: 155px;
-    margin-top: 5px;
+    padding: 19px 20px 55px 15px;
   }
 }
 
 @media (max-width: 769px) {
   .header_links {
-    padding: 19px 50px 30px 9px;
+    padding: 19px 10px 30px 0px;
   }
 
   .header_item {
@@ -154,29 +87,6 @@
   }
 }
 
-@media (max-width: 721px) {
-  .logoimage {
-    height: 65px;
-    width: 65px;
-  }
-  .header_item {
-    margin-right: 10px;
-    font-size: 12px;
-  }
-
-  .header_menu {
-    margin-top: 5px;
-  }
-
-  .header_links {
-    padding: 19px 40px 40px 9px;
-  }
-
-  .header_list {
-    padding: 0;
-  }
-}
-
 @media (max-width: 641px) {
   .header_links {
     padding: 19px 35px 25px 9px;
@@ -189,29 +99,6 @@
 
   .header_button {
     font-size: 10px;
-    width: 110px;
-    height: 25px;
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 561px) {
-  .logoimage {
-    height: 55px;
-    width: 55px;
-  }
-
-  .header_links {
-    padding: 10px 15px 30px 9px;
-  }
-
-  .header_item {
-    margin-right: 7px;
-    font-size: 9px;
-  }
-
-  .header_button {
-    font-size: 12px;
     width: 110px;
     height: 25px;
     margin-top: 10px;
@@ -248,6 +135,11 @@
 @media (width: 421px) {
   .header_links {
     padding: 19px 25px 0px 9px;
+  }
+
+  .logoimage {
+    height: 35px;
+    width: 35px;
   }
 }
 

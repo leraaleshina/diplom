@@ -3,13 +3,18 @@ import styles from "../css components/service.module.css";
 
 const Product = ({ priceList }) => {
   return (
-    <>
-      <div className={styles.name_wrapper}>
-        <span className={styles.name_service}>{priceList[0]}</span>
-        <span className={styles.price}>{priceList[1]}</span>
-      </div>
-    </>
+    <div>
+      {priceList && priceList.map(service => {
+        return (
+            <div className={styles.name_wrapper}>
+              <span className={styles.name_service}>{service[0]}</span>
+              <span className={styles.price}>{service[1]}</span>
+            </div>
+        )
+      })}
+</div>
   );
 };
 
 export default Product;
+

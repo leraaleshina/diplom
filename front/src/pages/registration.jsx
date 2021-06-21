@@ -63,13 +63,6 @@ const Registration = () => {
               {" "}
               <button className={styles.button}>Зарегистрироваться</button>{" "}
             </Link>
-            <div className={styles.chekked}>
-              <input type="checkbox" className={styles.check} />
-              <span className={styles.checkmark}>
-                Вы принимаете пользовательское соглашение и политику
-                конфиденциальности
-              </span>
-            </div>
           </div>
         </div>
       </section>

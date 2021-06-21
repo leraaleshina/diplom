@@ -3,6 +3,7 @@ import styles from "../css components/footer.module.css";
 import vk from "../svg/Vk.svg";
 import tg from "../svg/tg.svg";
 import inst from "../svg/inst.svg";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -11,30 +12,30 @@ export const Footer = () => {
         <nav className={styles.footer_nav}>
           <ul className={styles.footer_menu}>
             <li className={styles.footer_item}>
-              <a href="#" className={styles.footer_link}>
-                Товары
-              </a>
+            <Link to="/catalog" className={styles.footer_link}>
+                  Товары
+                </Link>
             </li>
             <li className={styles.footer_item}>
-              <a href="#" className={styles.footer_link}>
+            <Link to="/service" className={styles.footer_link}>
                 Услуги
-              </a>
+              </Link>
             </li>
             <li className={styles.footer_item}>
-              <a href="#" className={styles.footer_link}>
+              <Link to="/delivery" className={styles.footer_link}>
                 Доставка
-              </a>
+              </Link>
             </li>
 
             <li className={styles.footer_item}>
-              <a href="#" className={styles.footer_link}>
+              <Link to="/contact" className={styles.footer_link}>
                 Контакты
-              </a>
+              </Link>
             </li>
             <li className={styles.footer_item}>
-              <a href="#" className={styles.footer_link}>
+              <Link to="/feedback" className={styles.footer_link}>
                 Обратная связь
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -53,15 +54,15 @@ export const Footer = () => {
             singaservice61@yandex.ru
           </a>
           <div className={styles.ico_link}>
-            <a href="#" className={styles.footer_ico_link}>
-              <img src={vk} alt="vk" className={styles.footer_ico} />
-            </a>
-            <a href="#" className={styles.footer_ico_link}>
-              <img src={tg} alt="telegramm" className={styles.footer_ico} />
-            </a>
-            <a href="#" className={styles.footer_ico_link}>
-              <img src={inst} alt="instagramm" className={styles.footer_ico} />
-            </a>
+          <a href="https://vk.com/singaservice" className={styles.footer_ico_link}>
+                <img src={vk} alt="vk" className={styles.footer_ico} />
+              </a>
+              <a href="https://t.me/SingaService" className={styles.footer_ico_link}>
+                <img src={tg} alt="telegramm" className={styles.footer_ico} />
+              </a>
+              <a href="https://www.instagram.com/singa_service/" className={styles.footer_ico_link}>
+                <img src={inst} alt="instagramm" className={styles.footer_ico}/>
+              </a>
           </div>
         </div>
       </div>

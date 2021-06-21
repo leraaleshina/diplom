@@ -21,13 +21,13 @@ const Contact = () => {
                     <a href="tel:+7 928-959-60-61" className={styles.contact_tel}>+7 928-959-60-61</a>
                     <a className={styles.contact_mail} href="mailto:singaservice61@yandex.ru">singaservice61@yandex.ru</a>
                     <div className={styles.ico_link}>
-                        <a href="#" className={styles.contact_ico_link}>
+                        <a href="https://vk.com/singaservice" className={styles.contact_ico_link}>
                             <img src={vk} alt="vk" className={styles.contact_ico} />
                         </a>
-                        <a href="#" className={styles.contact_ico_link}>
+                        <a href="https://t.me/SingaService" className={styles.contact_ico_link}>
                             <img src={tg} alt="telegramm" className={styles.contact_ico} />
                         </a>
-                        <a href="#" className={styles.contact_ico_link}>
+                        <a href="https://www.instagram.com/singa_service/" className={styles.contact_ico_link}>
                             <img src={inst} alt="instagramm" className={styles.contact_ico} />
                         </a>
                     </div>

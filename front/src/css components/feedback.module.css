@@ -47,14 +47,18 @@
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 11px;
-  padding: 11px 134px 10px 12px;
+  width: 300px;
+  height: 50px;
   margin-bottom: 22px;
+  padding-left: 5px;
 }
 
 .text {
-  padding: 18px 350px 152px 28px;
+  width: 400px;
+  height: 150px;
   border: 1px solid #000000;
   border-radius: 11px;
+  padding-left: 5px;
 }
 
 .button {
@@ -127,9 +131,6 @@
     width: 650px;
   }
 
-  .text {
-    padding: 18px 300px 132px 28px;
-  }
 }
 
 @media (max-width: 641px) {
@@ -143,7 +144,7 @@
   }
 
   .text {
-    padding: 18px 230px 112px 28px;
+    width: 350px;
   }
   .card {
     padding: 70px 0px 8px 0px;
@@ -151,7 +152,7 @@
 
   .button {
     padding: 8px 64px;
-    margin-top: 26px;
+    margin-top: 10px;
   }
 }
 
@@ -172,16 +173,12 @@
     width: 400px;
   }
 
-  .text {
-    padding: 18px 150px 80px 28px;
-  }
   .card {
     padding: 50px 0px 12px 0px;
   }
 
   .button {
     padding: 8px 64px;
-    margin-top: 26px;
   }
 }
 
@@ -205,10 +202,12 @@
 
   .form_input {
     margin-bottom: 12px;
+    width: 200px;
+    height: 30px;
   }
 
   .text {
-    padding: 18px 130px 80px 28px;
+   width: 300px;
   }
 
   .button {
@@ -239,13 +238,13 @@
   }
 
   .form_input {
-    padding: 8px 80px 8px 12px;
     margin-bottom: 8px;
     font-size: 8px;
   }
 
   .text {
-    padding: 8px 100px 60px 20px;
     font-size: 8px;
+    width: 250px;
+    height: 100px;
   }
 }

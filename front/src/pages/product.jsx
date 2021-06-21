@@ -44,7 +44,8 @@ const Product = () => {
                 <h2 className={styles.same_title}>
                     Похожие товары
                 </h2>
-                <div className={styles.cards}>
+
+                 <div className={styles.cards}>
                     <div className={styles.card}>
                         <img src={pic1} alt="" className={styles.photo}/>
                         <div className={styles.price_block}>
@@ -89,7 +90,7 @@ const Product = () => {
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
             </div>
             <Question />

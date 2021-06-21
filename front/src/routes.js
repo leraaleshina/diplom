@@ -12,6 +12,7 @@ import Service from "./pages/service";
 import Feedback from "./pages/feedback";
 import Basket from "./pages/basket";
 import Like from "./pages/like";
+import Recording from "./pages/recording_service"
 
 export const Routes = () => {
   return (
@@ -51,6 +52,9 @@ export const Routes = () => {
       </Route>
       <Route path={"/like"}>
         <Like />
+      </Route>
+      <Route path={"/recording"}>
+        <Recording/>
       </Route>
     </Switch>
   );

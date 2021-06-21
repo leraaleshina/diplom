@@ -37,15 +37,21 @@
 
 .block_cards {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  margin-top: 48px;
+  flex-wrap: wrap;
+  max-width: 1300px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   margin-right: 93px;
+  margin-top: 50px;
+}
+
+.pic {
+  width: 250px;
+  height: 250px;
 }
 
 .price {
